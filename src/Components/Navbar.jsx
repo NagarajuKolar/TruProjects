@@ -4,18 +4,14 @@ import { Link } from "react-router-dom";
 import {
     FaFacebookF, FaXTwitter, FaLinkedinIn, FaYoutube,
     FaPinterestP, FaInstagram, FaBars, FaChevronDown, FaPlus
-} from "react-icons/fa";
+} from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState(null);   
-
-    // BTECH
     const [activeDept, setActiveDept] = useState(null);   
     const [activeLevel, setActiveLevel] = useState(null); 
-
-    // MTECH
     const [activeDeptMtech, setActiveDeptMtech] = useState(null);
     const [activeLevelMtech, setActiveLevelMtech] = useState(null);
 

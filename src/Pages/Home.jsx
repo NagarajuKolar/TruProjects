@@ -1,16 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import '../CSS/Home.css';
 import ban1 from '../assets/ban1.png'
-import {
-    FaGraduationCap,
-    FaProjectDiagram,
-    FaFileAlt,
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import {FaGraduationCap,
     FaBook,
-    FaUsers,
-    FaChalkboardTeacher,
-} from "react-icons/fa";
+    FaUsers} from "react-icons/fa6";
 import {FiLayers} from "react-icons/fi";
 import { LuClipboardList} from "react-icons/lu";
 import { MdOutlineWork, MdOutlineArticle } from "react-icons/md";
@@ -84,7 +79,7 @@ function Home() {
 
 
             <section className="about-section">
-                
+
             </section>
         </>
     )
