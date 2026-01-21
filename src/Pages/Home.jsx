@@ -5,7 +5,10 @@ import ban1 from '../assets/ban1.png'
 import { FaChevronRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa6";
 import { FaGraduationCap } from "react-icons/fa6";
-import { FaBookOpen } from "react-icons/fa6";
+import { FaBook } from "react-icons/fa";
+import { FaFileAlt } from "react-icons/fa";
+import { FaChalkboardTeacher } from "react-icons/fa";
+import { FaProjectDiagram } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa6";
 import {FiLayers} from "react-icons/fi";
 import { LuClipboardList} from "react-icons/lu";
