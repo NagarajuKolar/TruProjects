@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {
     FaFacebookF, FaXTwitter, FaLinkedinIn, FaYoutube,
     FaPinterestP, FaInstagram, FaBars, FaChevronDown, FaPlus
-} from "react-icons/fa6";
+} from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 
 function Navbar() {
