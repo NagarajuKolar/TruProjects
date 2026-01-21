@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import "../CSS/Navbar.css";
 import { Link } from "react-router-dom";
-import {
-    FaFacebookF, FaXTwitter, FaLinkedinIn, FaYoutube,
-    FaPinterestP, FaInstagram, FaBars, FaChevronDown, FaPlus
-} from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaPinterestP } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa6";
+import { FaPlus } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 
 function Navbar() {
