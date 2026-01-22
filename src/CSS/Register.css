@@ -1,0 +1,100 @@
+.quick-enquiry {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.quick-enquiry h2 {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.quick-enquiry h2 span {
+  color: #ef2f55;
+  position: relative;
+}
+
+.quick-enquiry h2 span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 42px;
+  height: 3px;
+  background: #ef2f55;
+}
+
+
+.quick-form {
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 22px;
+  text-align: left;
+}
+.quick-form   label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333333bf;
+}
+
+/* INPUTS */
+.quick-form  input,
+.quick-form select {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #bdbdbd;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+
+@media (max-width: 900px) {
+
+  .quick-form {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-form .full,
+  .quick-form .submit-btn {
+    grid-column: span 1;
+  }
+
+  .quick-enquiry h2 {
+    font-size: 24px;
+  }
+
+  .quick-form label {
+    font-size: 14px;
+  }
+
+  .quick-form input,
+  .quick-form select {
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    height: 46px;
+    font-size: 16px;
+  }
+
+}
+
+
+@media (max-width: 420px) {
+
+  .quick-enquiry {
+    padding: 30px 12px;
+  }
+
+  .quick-enquiry h2 {
+    font-size: 22px;
+  }
+
+}

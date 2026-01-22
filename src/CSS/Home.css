@@ -123,6 +123,32 @@
 .service-card:hover p {
   color: #ff3b6a;
 }
+.service-img {
+  width: 80px;
+    height: 80px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.service-img img {
+  width: 60px;
+  height: 60px;
+
+}
+
+
+.service-card:hover .service-img {
+  background: #ff3b6a;
+}
+
+.service-card:hover .service-img img {
+  filter: brightness(0) invert(1);
+}
+
 
 
 .service-card .icon {

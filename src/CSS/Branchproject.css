@@ -1,9 +1,6 @@
 .-banner {
   height: 280px;
-  background: linear-gradient(
-      rgba(111, 110, 110, 0.55),
-      rgba(139, 137, 137, 0.55)
-    ),url("../assets/banner.png") top / cover no-repeat;
+  background: linear-gradient(rgba(111, 110, 110, 0.55), rgb(228 212 212 / 0%)), url(/src/assets/banner.png) top / cover no-repeat;
   display: flex;
   align-items: center;
   padding-left: 90px;

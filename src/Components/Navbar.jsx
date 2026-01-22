@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../CSS/Navbar.css";
 import { Link } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa";
@@ -12,6 +12,10 @@ import { FaChevronDown } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import { MdEditDocument } from "react-icons/md";
+import { FaChevronUp } from "react-icons/fa";
+
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -21,6 +25,21 @@ function Navbar() {
     const [activeDeptMtech, setActiveDeptMtech] = useState(null);
     const [activeLevelMtech, setActiveLevelMtech] = useState(null);
     const navigate = useNavigate();
+    const [show, setShow] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            setShow(window.scrollY > 300);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
 
 
@@ -82,7 +101,9 @@ function Navbar() {
                     <a href="#"><FaInstagram /></a>
                 </div>
                 <div className="top-right">
-                    <button className="register-btn">Register Now</button>
+                    <button className="register-btn">
+                        <Link to='/register'>Register Now</Link>
+                    </button>
                 </div>
             </div>
 
@@ -278,6 +299,28 @@ function Navbar() {
                     <FaBars />
                 </div>
             </nav>
+
+            <div className="bottom-navbar">
+
+                <a href="tel:+919676190678" className="call-btn">
+                    <FaPhoneAlt className="nav-phone-icon" /> CALL NOW
+                </a>
+
+                <a href="/register" className="register-btn">
+                    <MdEditDocument className="nav-icon" /> REGISTER NOW
+                </a>
+
+                <a href="https://wa.me/919676190678" className="whatsapp-btn">
+                    <FaWhatsapp className="nav-icon" /> WHATSAPP
+                </a>
+
+            </div>
+
+            <button className={`scroll-top-btn ${show ? "show" : ""}`} onClick={scrollToTop}>
+                <FaChevronUp />
+            </button>
+
+
         </>
     );
 }

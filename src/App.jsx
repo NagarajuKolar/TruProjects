@@ -10,6 +10,9 @@ import Researchpaper from './Pages/Researchpaper'
 import ProgramPage from './Pages/ProgramPage'
 import Aboutus from './Pages/Aboutus'
 import BranchProjectspage from './Pages/BranchProjectspage'
+import Contactus from './Pages/Contactus'
+import Register from './Pages/Register'
+import DocumentWriting from './Pages/DocumentWriting'
 
 function App() {
 
@@ -23,6 +26,9 @@ function App() {
         <Route path='/:program' element={<ProgramPage />} />
         <Route path="/about" element={<Aboutus />} />
          <Route path="/:program/:branch" element={<BranchProjectspage />} />
+         <Route path='/contact' element={<Contactus/>}/>
+         <Route path='/register' element={<Register/>}/>
+         <Route path='/document-writing' element={<DocumentWriting/>}/>
 
 
 

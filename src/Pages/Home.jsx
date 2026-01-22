@@ -2,35 +2,46 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import '../CSS/Home.css';
 import ban1 from '../assets/ban1.png'
+import ban2 from '../assets/ban2.png'
+import ban3 from '../assets/ban3.png'
 import { FaChevronRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa6";
+import { FaPlusCircle } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa6";
-import { FaBook } from "react-icons/fa";
-import { FaFileAlt } from "react-icons/fa";
-import { FaChalkboardTeacher } from "react-icons/fa";
-import { FaProjectDiagram } from "react-icons/fa";
-import { FaUsers } from "react-icons/fa6";
-import { FiLayers } from "react-icons/fi";
-import { LuClipboardList } from "react-icons/lu";
-import { MdOutlineArticle } from "react-icons/md";
 import tech1 from '../assets/tech1.png'
 import tech2 from '../assets/tech2.png'
+import tech3 from '../assets/tech3.png'
+import tech4 from '../assets/tech4.png'
+import tech5 from '../assets/tech5.png'
+import tech6 from '../assets/tech6.png'
 import Testimonials from '../Components/Testimonials';
+import service1 from '../assets/serv1.png'
+import service2 from '../assets/serv2.png'
+import service3 from '../assets/serv3.png'
+import service4 from '../assets/serv4.png'
+import service5 from '../assets/serv5.png'
+import service6 from '../assets/serv6.png'
+import service7 from '../assets/serv7.png'
+import service8 from '../assets/serv8.png'
+import service9 from '../assets/serv9.png'
+import service10 from '../assets/serv10.png'
+import aboutimage from '../assets/about.png'
 
 function Home() {
     const images = [
         ban1,
-        "https://picsum.photos/id/1016/800/400",
-        "https://picsum.photos/id/1018/800/400",
+        ban2,
+        ban3,
         "https://picsum.photos/id/1019/800/400",
     ];
-    const [openIndexes, setOpenIndexes] = useState([]);
+    const [openIndexes, setOpenIndexes] = useState([0]);
+
 
     const handleToggle = (index) => {
         if (openIndexes.includes(index)) {
-            setOpenIndexes(openIndexes.filter((i) => i !== index)); // close it
+            setOpenIndexes(openIndexes.filter((i) => i !== index)); 
         } else {
-            setOpenIndexes([...openIndexes, index]); // open it
+            setOpenIndexes([...openIndexes, index]);
         }
     };
     const aboutdata = [
@@ -79,25 +90,26 @@ function Home() {
     };
 
     const services = [
-        { title: "B.Tech Projects", icon: <FaGraduationCap /> },
-        { title: "M.Tech Projects", icon: <FiLayers /> },
-        { title: "Mini Projects", icon: <FaProjectDiagram /> },
-        { title: "Major Projects", icon: <LuClipboardList /> },
-        { title: "IEEE Projects", icon: <FaBook /> },
-        { title: "Bulk Sale", icon: <FaFileAlt /> },
-        { title: "Paper writing & Publishing", icon: <MdOutlineArticle /> },
-        { title: "Document writing with plagiarism", icon: <FaFileAlt /> },
-        { title: "Summer Internships", icon: <FaUsers /> },
-        { title: "Trainings", icon: <FaChalkboardTeacher /> },
+        { title: "B.Tech Projects", image: service1 },
+        { title: "M.Tech Projects", image: service2 },
+        { title: "Mini Projects", image: service3 },
+        { title: "Major Projects", image: service4 },
+        { title: "IEEE Projects", image: service5 },
+        { title: "Bulk Sale", image: service6 },
+        { title: "Paper writing & Publishing", image: service7 },
+        { title: "Document writing with plagiarism", image: service8 },
+        { title: "Summer Internships", image: service9 },
+        { title: "Trainings", image: service10 },
     ];
+
 
     const technologies = [
         { id: 1, title: "Machine Learning", image: tech1 },
         { id: 2, title: "Artificial Intelligence", image: tech2 },
-        { id: 3, title: "Deep Learning", image: tech1 },
-        { id: 4, title: "Image Processing", image: tech2 },
-        { id: 5, title: "Python", image: tech1 },
-        { id: 6, title: "Java", image: tech2 },
+        { id: 3, title: "Deep Learning", image: tech3 },
+        { id: 4, title: "Image Processing", image: tech4 },
+        { id: 5, title: "Python", image: tech5 },
+        { id: 6, title: "Java", image: tech6 },
         { id: 7, title: "Big Data", image: tech1 },
         { id: 8, title: "Block Chain", image: tech2 },
         { id: 9, title: "Cloud Computing", image: tech1 },
@@ -134,8 +146,11 @@ function Home() {
                 <div className="services-grid">
                     {services.map((item, index) => (
                         <div className="service-card" key={index}>
-                            <div className="icon">{item.icon}</div>
+                            <div className="service-img">
+                                <img src={item.image} alt={item.title} />
+                            </div>
                             <p>{item.title}</p>
+
                         </div>
                     ))}
                 </div>
@@ -146,7 +161,7 @@ function Home() {
 
 
                     <div className="about-left">
-                        <img src={ban1} alt="About" />
+                        <img src={aboutimage} alt="About" />
                     </div>
 
 
@@ -164,7 +179,7 @@ function Home() {
                                         onClick={() => handleToggle(index)}
                                     >
                                         {item.title}
-                                        <span>{isOpen ? "−" : "+"}</span>
+                                        <span>{isOpen ? "−" : <FaPlusCircle />}</span>
                                     </button>
 
                                     <div
@@ -217,7 +232,7 @@ function Home() {
                 </div>
             </section>
 
-            <Testimonials/>
+            <Testimonials />
 
 
 
