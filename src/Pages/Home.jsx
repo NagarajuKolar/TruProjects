@@ -10,9 +10,12 @@ import { FaFileAlt } from "react-icons/fa";
 import { FaChalkboardTeacher } from "react-icons/fa";
 import { FaProjectDiagram } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa6";
-import {FiLayers} from "react-icons/fi";
-import { LuClipboardList} from "react-icons/lu";
-import {  MdOutlineArticle } from "react-icons/md";
+import { FiLayers } from "react-icons/fi";
+import { LuClipboardList } from "react-icons/lu";
+import { MdOutlineArticle } from "react-icons/md";
+import tech1 from '../assets/tech1.png'
+import tech2 from '../assets/tech2.png'
+import Testimonials from '../Components/Testimonials';
 
 function Home() {
     const images = [
@@ -21,6 +24,50 @@ function Home() {
         "https://picsum.photos/id/1018/800/400",
         "https://picsum.photos/id/1019/800/400",
     ];
+    const [openIndexes, setOpenIndexes] = useState([]);
+
+    const handleToggle = (index) => {
+        if (openIndexes.includes(index)) {
+            setOpenIndexes(openIndexes.filter((i) => i !== index)); // close it
+        } else {
+            setOpenIndexes([...openIndexes, index]); // open it
+        }
+    };
+    const aboutdata = [
+        {
+            title: "About Us",
+            type: "paragraph",
+            content: [
+                "Welcome to Tru Projects. Tru Projects is being introduced to make a long way from its beginnings. We are the one source and efficient student oriented service provider for IT projects.",
+                "We expertise and are the best mutually proclaimed platform for Academic Live Projects, for students of B.Tech, M.Tech, MBA, MCA. We are dedicated to giving you the best of IT projects, with a focus on Quality, Dependability, Structure and much more."
+            ]
+        },
+        {
+            title: "Vision",
+            type: "paragraph",
+            content: [
+                "To create a world of opportunities in which the students could explore and identify their domain of passion and transform it into a dream and booming career."
+            ]
+        },
+        {
+            title: "Mission",
+            type: "paragraph",
+            content: [
+                "We strive to create and nurture personal effectiveness by developing and offering an array of novel and diverse project ideas in support of our commitment to help students make a difference, while contributing to organizational enrichment."
+            ]
+        },
+        {
+            title: "Objectives",
+            type: "list",
+            content: [
+                "Help students to do their academic projects incorporate environment enabling them to analyze if the theoretical aspects they learned in universities are connected to the real world.",
+                "Truprojects does its best to offer projects in advanced/current topics assisting students to stay ahead of their counterparts, expose to present technological updates, and thus decide if the profession they are in is the right choice.",
+                "Truprojects endeavors to put every student in an environment that aids him or her to learn new skills, meet and network with people, improve communication and management abilities, and obtain a comprehensive practical experience.",
+                "After all these, the core objective of Truprojects is to get the students hired by the best companies in the industry."
+            ]
+        }
+    ];
+
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const nextSlide = () => {
@@ -42,6 +89,19 @@ function Home() {
         { title: "Document writing with plagiarism", icon: <FaFileAlt /> },
         { title: "Summer Internships", icon: <FaUsers /> },
         { title: "Trainings", icon: <FaChalkboardTeacher /> },
+    ];
+
+    const technologies = [
+        { id: 1, title: "Machine Learning", image: tech1 },
+        { id: 2, title: "Artificial Intelligence", image: tech2 },
+        { id: 3, title: "Deep Learning", image: tech1 },
+        { id: 4, title: "Image Processing", image: tech2 },
+        { id: 5, title: "Python", image: tech1 },
+        { id: 6, title: "Java", image: tech2 },
+        { id: 7, title: "Big Data", image: tech1 },
+        { id: 8, title: "Block Chain", image: tech2 },
+        { id: 9, title: "Cloud Computing", image: tech1 },
+        { id: 10, title: "Data Mining", image: tech2 },
     ];
     useEffect(() => {
         const timer = setInterval(nextSlide, 4000);
@@ -81,10 +141,88 @@ function Home() {
                 </div>
             </section>
 
-
             <section className="about-section">
+                <div className="about-container">
 
+
+                    <div className="about-left">
+                        <img src={ban1} alt="About" />
+                    </div>
+
+
+                    <div className="about-right">
+                        <h2 className="about-title">
+                            ABOUT <span>US</span>
+                        </h2>
+                        {aboutdata.map((item, index) => {
+                            const isOpen = openIndexes.includes(index);
+
+                            return (
+                                <div className="about-accordion" key={index}>
+                                    <button
+                                        className="about-accordion-header"
+                                        onClick={() => handleToggle(index)}
+                                    >
+                                        {item.title}
+                                        <span>{isOpen ? "−" : "+"}</span>
+                                    </button>
+
+                                    <div
+                                        className={`about-accordion-body about-box ${isOpen ? "open" : ""
+                                            }`}
+                                    >
+                                        {item.type === "paragraph" &&
+                                            item.content.map((text, i) => (
+                                                <p key={i}>{text}</p>
+                                            ))}
+
+                                        {item.type === "list" && (
+                                            <ul className="about-list">
+                                                {item.content.map((point, i) => (
+                                                    <li key={i}>{point}</li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                </div>
             </section>
+
+
+            <section className="technology">
+                <h2 className="tech-title">
+                    LATEST <span>TECHNOLOGIES</span>
+                </h2>
+
+                <div className="tech-grid">
+                    {technologies.map((tech) => (
+                        <div className="tech-card" key={tech.id}>
+                            <img src={tech.image} alt={tech.title} />
+
+                            <div className="tech-content">
+                                <h3>{tech.title}</h3>
+
+                                <div className="tech-links">
+                                    <a href="#">Mini Project</a>
+                                    <a href="#">Major Project</a>
+                                    <a href="#">View Project Titles</a>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <Testimonials/>
+
+
+
+
+
         </>
     )
 }

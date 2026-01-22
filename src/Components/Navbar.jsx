@@ -11,14 +11,17 @@ import { FaBars } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [activeMenu, setActiveMenu] = useState(null);   
-    const [activeDept, setActiveDept] = useState(null);   
-    const [activeLevel, setActiveLevel] = useState(null); 
+    const [activeMenu, setActiveMenu] = useState(null);
+    const [activeDept, setActiveDept] = useState(null);
+    const [activeLevel, setActiveLevel] = useState(null);
     const [activeDeptMtech, setActiveDeptMtech] = useState(null);
     const [activeLevelMtech, setActiveLevelMtech] = useState(null);
+    const navigate = useNavigate();
+
 
 
     const isMobile = window.innerWidth <= 1024;
@@ -93,26 +96,26 @@ function Navbar() {
                     <Link to="/" onClick={closeAll}>Home</Link>
                     <Link to="/about" onClick={closeAll}>About Us</Link>
 
-                    
+
                     <div className="dropdown-wrapper" onMouseEnter={() => !isMobile && setActiveMenu("btech")}>
-                        <button className="drop-btn" onClick={() => toggleMenu("btech")}>
+                        <Link to="/btech" className="drop-btn" onClick={() => toggleMenu("btech")}>
                             B.Tech Projects {isMobile ? (activeMenu === "btech" ? <IoMdClose /> : <FaPlus />) : <FaChevronDown />}
-                        </button>
+                        </Link>
 
                         {!isMobile && activeMenu === "btech" && (
                             <div className="mega-menu">
                                 <div className="mega-column">
-                                    <h4>CSE</h4>
+                                    <h4 onClick={() => navigate("/btech/cse")}>CSE </h4>
                                     <Link to="/btech/cse/major">Major Projects</Link>
                                     <Link to="/btech/cse/mini">Mini Projects</Link>
                                 </div>
                                 <div className="mega-column">
-                                    <h4>ECE</h4>
+                                    <h4 onClick={() => navigate("/btech/ece")}>ECE</h4>
                                     <Link to="/btech/ece/major">Major Projects</Link>
                                     <Link to="/btech/ece/mini">Mini Projects</Link>
                                 </div>
                                 <div className="mega-column">
-                                    <h4>EEE</h4>
+                                    <h4 onClick={() => navigate("/btech/eee")}>EEE</h4>
                                     <Link to="/btech/eee/major">Major Projects</Link>
                                     <Link to="/btech/eee/mini">Mini Projects</Link>
                                 </div>
@@ -160,35 +163,36 @@ function Navbar() {
                         )}
                     </div>
 
-                    
+
 
                     <div className="dropdown-wrapper" onMouseEnter={() => !isMobile && setActiveMenu("mtech")}>
-                        <button className="drop-btn" onClick={() => toggleMenu("mtech")}>
+                        <Link to='/mtech'><button className="drop-btn" onClick={() => toggleMenu("mtech")}>
                             M.Tech Projects {isMobile ? (activeMenu === "mtech" ? <IoMdClose /> : <FaPlus />) : <FaChevronDown />}
                         </button>
+                        </Link>
 
-                        
+
                         {!isMobile && activeMenu === "mtech" && (
                             <div className="mega-menu">
                                 <div className="mega-column">
-                                    <h4>CSE</h4>
+                                    <h4 onClick={() => navigate("/mtech-cse-projects")}>CSE</h4>
                                     <Link to="/mtech/cse/major">Major Projects</Link>
                                     <Link to="/mtech/cse/mini">Mini Projects</Link>
                                 </div>
                                 <div className="mega-column">
-                                    <h4>ECE</h4>
+                                    <h4 onClick={() => navigate("/mtech-ece-projects")}>ECE</h4>
                                     <Link to="/mtech/ece/major">Major Projects</Link>
                                     <Link to="/mtech/ece/mini">Mini Projects</Link>
                                 </div>
                                 <div className="mega-column">
-                                    <h4>EEE</h4>
+                                    <h4 onClick={() => navigate("/mtech-ece-projects")}>EEE</h4>
                                     <Link to="/mtech/eee/major">Major Projects</Link>
                                     <Link to="/mtech/eee/mini">Mini Projects</Link>
                                 </div>
                             </div>
                         )}
 
-                       
+
                         {isMobile && activeMenu === "mtech" && (
                             <div className="mega-menu">
                                 <div className="mega-column">

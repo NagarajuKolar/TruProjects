@@ -1,0 +1,108 @@
+.-banner {
+  height: 280px;
+  background: linear-gradient(
+      rgba(111, 110, 110, 0.55),
+      rgba(139, 137, 137, 0.55)
+    ),url("../assets/banner.png") top / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 90px;
+}
+
+.program-banner h1 {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.project-type-section {
+  padding: 70px 80px;
+}
+
+.section-heading {
+  font-size: 30px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.section-heading span {
+  color: #e91e63;
+  position: relative;
+}
+
+.section-heading span::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #e91e63;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+
+/* Grid */
+.project-type-grid {
+  display: flex;
+  gap: 60px;
+}
+
+/* Wrapper */
+.project-type-wrapper {
+  text-align: center;
+}
+
+/* Card */
+.project-type-card {
+  width: 260px;
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.project-type-card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.project-type-card h3 {
+  font-size: 18px;
+  color: #222;
+}
+
+/* Hover card */
+.project-type-wrapper:hover .project-type-card {
+  transform: translateY(-8px);
+}
+
+/* View Button */
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 5px;
+  padding: 8px 22px;
+  background: #e91e63;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.view-btn svg {
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: 0.3s ease;
+}
+
+/* Hover effect for arrow */
+.project-type-wrapper:hover .view-btn svg {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.view-btn:hover {
+  background: #d81b60;
+}

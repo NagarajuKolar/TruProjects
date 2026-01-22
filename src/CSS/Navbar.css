@@ -18,6 +18,13 @@
     align-items: center;
     gap: 14px;
 }
+.top-left a{
+    color: white;
+}
+.mega-column h4 {
+  cursor: pointer;
+}
+
 
 .register-btn {
     background: #ff2c55;
