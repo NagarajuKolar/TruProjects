@@ -4,14 +4,18 @@ function Locationstriper({ locations }) {
     if (!locations || locations.length === 0) return null;
     return (
         <section className="locations-flexx">
-            <div className="locations-innerr">
-                {locations.map((city, index) => (
-                    <span className="location-item" key={index}>
-                        {city}
-                        <span className="pipe"> |</span>
-                    </span>
-                ))}
+            <div className="location-outer">
+                <div className="locations-innerr">
+                    {locations.map((city, index) => (
+                        <span className="location-item" key={index}>
+                            {city}
+                            <span className="pipe"> |</span>
+                        </span>
+                    ))}
+                </div>
+
             </div>
+
         </section>
     )
 }

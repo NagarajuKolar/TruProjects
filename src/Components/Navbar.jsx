@@ -196,17 +196,17 @@ function Navbar() {
                         {!isMobile && activeMenu === "mtech" && (
                             <div className="mega-menu">
                                 <div className="mega-column">
-                                    <h4 onClick={() => navigate("/mtech-cse-projects")}>CSE</h4>
+                                    <h4 onClick={() => navigate("/mtech/cse")}>CSE</h4>
                                     <Link to="/mtech/cse/major">Major Projects</Link>
                                     <Link to="/mtech/cse/mini">Mini Projects</Link>
                                 </div>
                                 <div className="mega-column">
-                                    <h4 onClick={() => navigate("/mtech-ece-projects")}>ECE</h4>
+                                    <h4 onClick={() => navigate("/mtech/ece")}>ECE</h4>
                                     <Link to="/mtech/ece/major">Major Projects</Link>
                                     <Link to="/mtech/ece/mini">Mini Projects</Link>
                                 </div>
                                 <div className="mega-column">
-                                    <h4 onClick={() => navigate("/mtech-ece-projects")}>EEE</h4>
+                                    <h4 onClick={() => navigate("/mtech/eee")}>EEE</h4>
                                     <Link to="/mtech/eee/major">Major Projects</Link>
                                     <Link to="/mtech/eee/mini">Mini Projects</Link>
                                 </div>

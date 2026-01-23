@@ -75,7 +75,6 @@ function ProgramPage() {
                 <h1>{title}</h1>
             </div>
 
-            {/* Content */}
             <div className="program-container">
                 <h2 className="section-title">
                     {program === "btech" ? "B.TECH" : "M.TECH"} <span>BRANCHES</span>
@@ -91,10 +90,10 @@ function ProgramPage() {
 
                             <h3>{branch.name}</h3>
 
-                            <Link to={`/${program}/${branch.slug}`} className="view-progrm">
-                                <button className="view-btn">
+                            <Link to={`/${program}/${branch.slug}`} className="pro-view-progrm">
+                                <button className="pro-view-btn">
                                     View
-                                    <span className="view-icon">
+                                    <span className="pro-view-icon">
                                         <MdOutlineNavigateNext />
                                     </span>
                                 </button>

@@ -4,6 +4,7 @@ import '../CSS/Home.css';
 import ban1 from '../assets/ban1.png'
 import ban2 from '../assets/ban2.png'
 import ban3 from '../assets/ban3.png'
+import ban4 from '../assets/ban4.png'
 import { FaChevronRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa6";
 import { FaPlusCircle } from "react-icons/fa";
@@ -32,7 +33,7 @@ function Home() {
         ban1,
         ban2,
         ban3,
-        "https://picsum.photos/id/1019/800/400",
+        ban4,
     ];
     const [openIndexes, setOpenIndexes] = useState([0]);
 

@@ -3,11 +3,37 @@ import { useParams, Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import major from '../assets/major.png'
 import '../CSS/Branchproject.css'
+import Readmore from '../Components/Readmore';
+import Locationstriper from '../Components/Locationstriper';
+import { contentTemplate, splitParagraphs, formatContent } from '../Utils/ContentTemplate';
+import { btechCities, mtechCities } from '../Utils/BranchlocationData';
+
 
 function BranchProjectspage() {
     const { program, branch } = useParams();
     const programName = program === "btech" ? "B.Tech" : "M.Tech";
     const branchName = branch.toUpperCase();
+    const pageData = {
+        program: programName,
+        branch: branchName,
+        type: "",
+    };
+    const previewText = formatContent(
+        contentTemplate.preview,
+        pageData
+    ).trim();
+
+    const formattedBody = formatContent(
+        contentTemplate.body,
+        pageData
+    );
+
+    const fullText = splitParagraphs(formattedBody);
+
+    const cities = program === "btech" ? btechCities : mtechCities;
+    const citylocations = cities.map(
+        (city) => `${programName} ${branchName} Projects ${city}`
+    );
 
     return (
         <>
@@ -54,6 +80,12 @@ function BranchProjectspage() {
 
                 </div>
             </div>
+
+            <Readmore
+                previewText={previewText}
+                fullText={fullText} />
+
+            <Locationstriper locations={citylocations} />
 
 
         </>

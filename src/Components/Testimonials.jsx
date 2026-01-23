@@ -24,7 +24,7 @@ function Testimonials() {
         {
             id: 3,
             name: "Sowmya",
-            text: "Best place to gain real-time project experience with clear explanations.",
+            text: "Before coming to Tru Projects, I am totally scared about projects programme as what we learnt in college is different. But here at Tru Projects the trainers made complex things simple for us. I recommend fresh computer graduates not to lose the opportunity to work with Tru Projects.",
             image: test1,
         },
     ];
@@ -56,7 +56,7 @@ function Testimonials() {
 
                         <button className="youtube-btn">
                             <span className="btn-text">Visit Our Channel</span>
-                            <span ><FaRegCirclePlay className="btn-icon"/></span>
+                            <span ><FaRegCirclePlay className="btn-icon" /></span>
 
                         </button>
                     </div>
@@ -76,7 +76,11 @@ function Testimonials() {
 
                     <div className="testimonial-content">
                         <img src={image} alt={name} />
-                        <p>{text} <b>{name}</b></p>
+                        <p>
+                            {text}
+                            <br />
+                            <span className="testimonial-name">{name}</span>
+                        </p>
                     </div>
 
                     <span className="test-arrow right" onClick={nextSlide}>

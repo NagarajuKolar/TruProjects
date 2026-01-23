@@ -1,4 +1,3 @@
-
 .youtube-cta {
   width: 100%;
   min-height: 500px;
@@ -10,8 +9,9 @@
 
 .youtube-cta-container {
   width: 100%;
-  padding-left: 100px; 
+  padding-left: 100px;
 }
+
 .youtube-cta-box {
   max-width: 600px;
   background: #ef2f55;
@@ -34,23 +34,26 @@
   padding: 14px 28px;
   border-radius: 6px;
   cursor: pointer;
-  display: flex;              
-  align-items: center;        
-  justify-content: center;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 6px;
   margin: 0 auto;
 
 }
-.btn-text{
-    font-size: 20px;
+
+.btn-text {
+  font-size: 20px;
 }
-.btn-icon{
-    font-size: 20px;
-    align-items: center;
+
+.btn-icon {
+  font-size: 20px;
+  align-items: center;
 }
-.youtube-btn span{
-    display: inline-flex;
-    align-items: center;
+
+.youtube-btn span {
+  display: inline-flex;
+  align-items: center;
 }
 
 .youtube-btn .btn-icon {
@@ -66,97 +69,101 @@
 }
 
 .testimonial {
-    padding: 40px 42px;
-    text-align: center;
-    background: #fff;
-    height: 420px;
-    max-height: 500px;
+  padding: 40px 42px;
+  text-align: center;
+  background: #fff;
+  height: 420px;
+  max-height: 500px;
 }
 
 .testimonial-title {
-    font-size: 28px;
-    color: #ff3b6a;
-    font-weight: 700;
-    margin-bottom: 60px;
-    position: relative;
+  font-size: 28px;
+  color: #ff3b6a;
+  font-weight: 700;
+  margin-bottom: 60px;
+  position: relative;
 }
 
 .testimonial-title::after {
-    content: "";
-    width: 60px;
-    height: 2px;
-    background: #ff3b6a;
-    display: block;
-    margin: 10px auto 0;
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #ff3b6a;
+  display: block;
+  margin: 10px auto 0;
 }
 
 .testimonial-slider {
-    position: relative;
-    max-width: 900px;
-    margin: auto;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .testimonial-content img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .testimonial-content p {
-    font-size: 18px;
-    color: #444;
-    line-height: 1.6;
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
 }
 
 .testimonial-content b {
-    color: #000;
+  color: #000;
+}
+
+.testimonial-name {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #0d0d0d;
 }
 
 .test-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    cursor: pointer;
-    color: #333;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .test-arrow:hover {
-    background: rgb(244 240 240 / 60%);
+  background: rgb(244 240 240 / 60%);
 }
 
 .test-arrow.left {
-    left: -40px;
+  left: -40px;
 }
 
 .test-arrow.right {
-    right: -40px;
+  right: -40px;
 }
-
-
-.testimonial-slider:hover .test-arrow {
-    opacity: 1;
-}
-
-.testimonial-dots {
-    margin-top: 40px;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-    background: #ccc;
-    display: inline-block;
+.testimonial-dots .dot {
+    width: 6px;
+    height: 7px;
+    background: #cfcfcf;
     border-radius: 50%;
-    margin: 0 5px;
     cursor: pointer;
 }
 
+.testimonial-slider:hover .test-arrow {
+  opacity: 1;
+}
+
+.testimonial-dots {
+  margin-top: 40px;
+}
+
+
 .dot.active {
-    background: #333;
+  background: #333;
 }
 
 @media (max-width: 768px) {
@@ -186,7 +193,7 @@
     margin-top: 10px;
   }
 
-  
+
   .testimonial {
     padding: 30px 20px;
     height: auto;
@@ -200,6 +207,7 @@
     right: -20px;
   }
 }
+
 @media (max-width: 480px) {
   .youtube-cta {
     padding: 35px 10px;
@@ -228,4 +236,3 @@
     margin-top: 25px;
   }
 }
-

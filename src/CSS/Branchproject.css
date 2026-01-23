@@ -1,4 +1,4 @@
-.-banner {
+.branch-banner {
   height: 280px;
   background: linear-gradient(rgba(111, 110, 110, 0.55), rgb(228 212 212 / 0%)), url(/src/assets/banner.png) top / cover no-repeat;
   display: flex;
@@ -6,9 +6,9 @@
   padding-left: 90px;
 }
 
-.program-banner h1 {
+.branch-banner h1 {
   color: #fff;
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 600;
 }
 
@@ -37,20 +37,18 @@
   bottom: -8px;
 }
 
-/* Grid */
 .project-type-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 60px;
 }
 
-/* Wrapper */
 .project-type-wrapper {
   text-align: center;
 }
 
-/* Card */
 .project-type-card {
-  width: 260px;
+  width: 100%;
   padding: 40px 20px;
   background: #fff;
   border-radius: 16px;
@@ -59,7 +57,7 @@
 }
 
 .project-type-card img {
-  width: 60px;
+  width: 80px;
   margin-bottom: 20px;
 }
 
@@ -68,17 +66,15 @@
   color: #222;
 }
 
-/* Hover card */
 .project-type-wrapper:hover .project-type-card {
-  transform: translateY(-8px);
+  transform: translateZ(-8px);
 }
 
-/* View Button */
 .view-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 5px;
+  margin-top: 10px;
   padding: 8px 22px;
   background: #e91e63;
   color: #fff;
@@ -94,7 +90,6 @@
   transition: 0.3s ease;
 }
 
-/* Hover effect for arrow */
 .project-type-wrapper:hover .view-btn svg {
   opacity: 1;
   transform: translateX(0);
@@ -102,4 +97,32 @@
 
 .view-btn:hover {
   background: #d81b60;
+}
+
+@media (max-width: 992px) {
+  .project-type-section {
+    padding: 50px 40px;
+  }
+
+  .project-type-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-type-section {
+    padding: 40px 20px;
+  }
+
+  .project-type-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 468px) {
+  .project-type-grid {
+    grid-template-columns: 1fr;
+  }
 }
