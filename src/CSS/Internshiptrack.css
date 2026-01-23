@@ -32,7 +32,7 @@
 }
 
 .section-row {
-  background: #181f2b94;
+  background:#230909c9;
   color: #fff;
   font-weight: 600;
   padding: 12px 16px;
@@ -95,6 +95,7 @@
 .accordion-body.open {
   max-height: 500px;
   padding: 12px 16px;
+  background: #f757392b
 }
 
 @media (max-width: 900px) {

@@ -49,11 +49,49 @@ export const internshipTracks = [
           "Inbuilt functions",
           "String manipulation"
         ]
+      },
+
+      {
+        type: "day",
+        day: 5,
+        title: "Python Basics - OOPS",
+        topics: [
+          "Introduction to OOPS",
+          "Inheritance",
+          "Polymorphism",
+          "Encapsulation",
+          "Abstraction"
+        ]
+      },
+
+      {
+        type: "day",
+        day: 6,
+        title: "Python for Data Science - NumPy",
+        topics: [
+          "Introduction to NumPy",
+          "Operations in NumPy"
+        ]
+      },
+
+      {
+        type: "day",
+        day: 7,
+        title: "Python for Data Science - Pandas",
+        topics: [
+          "Introduction to Pandas",
+          "Indexing and Selecting Data",
+          "Merge and Append",
+          "Grouping and Summarizing",
+          "Lambda Functions",
+          "Pivot Tables",
+          "Reading Data"
+        ]
       }
+
     ]
   },
 
-  // =============================
 
   {
     id: "ai",
@@ -106,7 +144,58 @@ export const internshipTracks = [
           "Introduction to Pandas",
           "Reading and Cleaning Data"
         ]
+      },
+      {
+        type: "day",
+        day: 5,
+        title: "Introduction to SQL",
+        topics: [
+          "Database Design",
+          "OLAP vs OLTP",
+          "Star Schema",
+          "Basics of SQL",
+          "Sorting and Filtering",
+          "Pattern Matching",
+          "Relational Operators",
+          "Table Creation and Modification",
+          "Joins and Queries",
+          "User Defined Functions (UDF)"
+        ]
+      },
+
+      {
+        type: "section",
+        title: "Statistics & Data Analytics"
+      },
+
+      {
+        type: "day",
+        day: 6,
+        title: "Introduction to Data Analytics",
+        topics: [
+          "Business and Data Understanding",
+          "CRISP-DM Framework",
+          "Data Preparation",
+          "Modelling",
+          "Evaluation",
+          "Deployment"
+        ]
+      },
+
+      {
+        type: "day",
+        day: 7,
+        title: "Data Visualization in Python",
+        topics: [
+          "Importance of Visualization",
+          "Types of Charts",
+          "Visualization Libraries in Python",
+          "Matplotlib and Seaborn",
+          "Univariate and Bivariate Distributions",
+          "Time Series Visualization"
+        ]
       }
+
     ]
   },
 
