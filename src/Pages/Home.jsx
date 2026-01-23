@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import '../CSS/Home.css';
 import ban1 from '../assets/ban1.png'
 import ban2 from '../assets/ban2.png'
@@ -36,11 +36,25 @@ function Home() {
         ban4,
     ];
     const [openIndexes, setOpenIndexes] = useState([0]);
+    const touchstartX = useRef(null)
+    const handleStartTouch = (e) => {
+        touchstartX.current = e.touches[0].clientX;
+    }
+    const handleTouchEnd = (e) => {
+        if (!touchstartX.current) return;
+
+        const diff = touchstartX.current - e.changedTouches[0].clientX;
+
+        if (diff > 50) nextSlide();
+        if (diff < -50) handlePrev();
+
+        touchstartX.current = null;
+    };
 
 
     const handleToggle = (index) => {
         if (openIndexes.includes(index)) {
-            setOpenIndexes(openIndexes.filter((i) => i !== index)); 
+            setOpenIndexes(openIndexes.filter((i) => i !== index));
         } else {
             setOpenIndexes([...openIndexes, index]);
         }
@@ -122,7 +136,9 @@ function Home() {
     }, []);
     return (
         <>
-            <div className="slider">
+            <div className="slider"
+                onTouchStart={handleStartTouch}
+                onTouchEnd={handleTouchEnd}>
                 {images.map((img, index) => (
                     <div key={index} className={`slide ${index === currentSlide ? "active" : ""}`}>
                         <img src={img} alt="slider" />

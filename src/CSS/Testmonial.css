@@ -72,15 +72,14 @@
   padding: 40px 42px;
   text-align: center;
   background: #fff;
-  height: 420px;
-  max-height: 500px;
+
 }
 
 .testimonial-title {
   font-size: 28px;
   color: #ff3b6a;
   font-weight: 700;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -92,11 +91,23 @@
   display: block;
   margin: 10px auto 0;
 }
-
 .testimonial-slider {
   position: relative;
   max-width: 1000px;
   margin: auto;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonial-content p {
+  max-height: 220px;
+  overflow-y: auto;
 }
 
 .testimonial-content img {

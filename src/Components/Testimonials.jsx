@@ -1,12 +1,16 @@
 import React from 'react'
 import test1 from '../assets/test1.png'
 import '../CSS/Testmonial.css'
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import youtubeImg from '../assets/youtubeimg.png'
 import { FaRegCirclePlay } from "react-icons/fa6";
 
 function Testimonials() {
     const [index, setIndex] = useState(0);
+    const [paused, setPaused] = useState(false);
+
+    const touchStartX = useRef(null);
+    const intervalRef = useRef(null);
 
     const testimonials = [
         {
@@ -40,6 +44,32 @@ function Testimonials() {
         );
     };
 
+    useEffect(() => {//auto slide
+        if (paused) return;
+
+        intervalRef.current = setInterval(() => {
+            nextSlide();
+        }, 5000);
+
+        return () => clearInterval(intervalRef.current);
+    }, [paused, index]);
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e) => {
+        if (!touchStartX.current) return;
+
+        const diff =
+            touchStartX.current - e.changedTouches[0].clientX;
+
+        if (diff > 50) nextSlide();
+        if (diff < -50) prevSlide();
+
+        touchStartX.current = null;
+    };
+
     return (
         <>
 
@@ -69,7 +99,11 @@ function Testimonials() {
             <section className="testimonial">
                 <h2 className="testimonial-title">TESTIMONIALS</h2>
 
-                <div className="testimonial-slider">
+                <div className="testimonial-slider"
+                    onMouseEnter={() => setPaused(true)}
+                    onMouseLeave={() => setPaused(false)}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}>
                     <span className="test-arrow left" onClick={prevSlide}>
                         ❮
                     </span>

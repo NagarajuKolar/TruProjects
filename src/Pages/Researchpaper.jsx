@@ -1,14 +1,25 @@
 import React from 'react'
 import '../CSS/Research.css'
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import research from '../assets/research.png'
 import Logo1 from '../assets/L1.png'
 import Logo2 from '../assets/L2.png'
 import Logo3 from '../assets/L3.png'
+import Logo4 from '../assets/Logo4.png'
+import Logo5 from '../assets/Logo5.png'
+import Logo6 from '../assets/Logo6.png'
+import Logo7 from '../assets/Logo7.png'
+import Logo8 from '../assets/Logo8.png'
 import { CiCirclePlus } from "react-icons/ci";
 import { FaPlusCircle } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
+import { GrNext } from "react-icons/gr";
+import { GrPrevious } from "react-icons/gr";
 function Researchpaper() {
     const [showMore, setShowMore] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(null);
+    const [showModal, setShowModal] = useState(false);
+
     const journalList = [
         "IEEE",
         "SCI Indexed",
@@ -28,11 +39,12 @@ function Researchpaper() {
         { no: "08", text: "Review and revision as per feedback from the editors" },
         { no: "09", text: "Getting paper published" },
     ];
-    const logos = [Logo1, Logo2, Logo3, Logo1, Logo2, Logo3, Logo1, Logo2, Logo3];
+    const logos = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7, Logo8];
     const locations = [
         "Vizag", "Vijayawada", "Delhi", "Anantapur", "Bangalore", "Chennai", "Tirupati", "Kakinada", "Guntur", "Itanagar", "Dispur", "Patna", "Raipur", "Panaji", "Gandhinagar",
-        "Chandigarh", "Shimla", "Ranchi", "Thiruvananthapuram", "Bhopal", "Mumbai","Shimla", "Ranchi", "Thiruvananthapuram", "Bhopal", "Mumbai",
+        "Chandigarh", "Shimla", "Ranchi", "Thiruvananthapuram", "Bhopal", "Mumbai", "Shimla", "Ranchi", "Thiruvananthapuram", "Bhopal", "Mumbai",
     ];
+
     return (
         <>
             <section
@@ -176,7 +188,14 @@ function Researchpaper() {
             <section className="journal-section">
                 <div className="journal-grid">
                     {logos.map((logo, index) => (
-                        <div className="journal-card" key={index}>
+                        <div
+                            className="journal-card"
+                            key={index}
+                            onClick={() => {
+                                setActiveIndex(index);
+                                setShowModal(true);
+                            }}
+                        >
                             <img src={logo} alt="journal-logo" />
                             <div className="hover-overlay">
                                 <span><FaPlusCircle /></span>
@@ -185,6 +204,50 @@ function Researchpaper() {
                     ))}
                 </div>
             </section>
+
+            {showModal && (
+                <div className="journal-modal">
+                    <div className="journal-modal-content animate-pop">
+
+                        <span
+                            className="close-btn"
+                            onClick={() => setShowModal(false)}
+                        >
+                            <IoMdClose/>
+                        </span>
+
+                        <span
+                            className="nav-arrow left"
+                            onClick={() =>
+                                setActiveIndex(
+                                    activeIndex === 0 ? logos.length - 1 : activeIndex - 1
+                                )
+                            }
+                        >
+                            <GrPrevious />
+                        </span>
+
+                        <img
+                            src={logos[activeIndex]}
+                            alt="active-logo"
+                            className="modal-image"
+                        />
+
+                        <span
+                            className="nav-arrow right"
+                            onClick={() =>
+                                setActiveIndex(
+                                    activeIndex === logos.length - 1 ? 0 : activeIndex + 1
+                                )
+                            }
+                        >
+                            <GrNext />
+                        </span>
+                    </div>
+                </div>
+            )}
+
+
 
             <section className="locations-flex">
                 <div className="locations-inner">

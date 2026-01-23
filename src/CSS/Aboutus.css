@@ -74,8 +74,6 @@
   }
 }
 
-
-/* ================= ABOUT CONTENT SECTION ================= */
 .about-content {
   padding: 90px 0;
   background: #fff;
@@ -134,9 +132,8 @@
 }
 
 
-/* ================= RESPONSIVE ================= */
 
-/* Tablet */
+
 @media (max-width: 1024px) {
   .about-content-container {
     grid-template-columns: 1fr;
@@ -149,7 +146,7 @@
   }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
   .about-content {
     padding: 50px 16px;
@@ -168,7 +165,6 @@
 
 
 
-/* ======== EXPAND SECTION =========== */
 
 .expand-section {
   background: #fff;
@@ -180,7 +176,7 @@
   margin: auto;
 }
 
-/* CONTENT */
+
 .expand-content {
   overflow: hidden;
   max-height: 0;
@@ -194,7 +190,6 @@
   margin-bottom: 16px;
 }
 
-/* BUTTON */
 .expand-btn {
   margin-top: 18px;
   background: #0b4ddb;
@@ -219,20 +214,18 @@
   font-size: 16px;
 }
 
-/* SECTION */
 .projects-section {
   padding: 60px 80px;
   background: #fff;
 }
 
-/* GRID */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-/* CARD */
 .project-card {
   background: #fff;
   border-radius: 6px;
@@ -245,7 +238,7 @@
   transform: translateY(-4px);
 }
 
-/* THUMBNAIL */
+
 .project-thumb {
   position: relative;
   height: 250px;
@@ -259,7 +252,6 @@
   object-fit: cover;
 }
 
-/* PLAY BUTTON */
 .play-btn {
   position: absolute;
   inset: 0;
@@ -272,7 +264,6 @@
   pointer-events: none;
 }
 
-/* OVERLAY (HOVER EFFECT) */
 .project-overlay {
   position: absolute;
   inset: 0;
@@ -291,7 +282,7 @@
   transform: translateY(0);
 }
 
-/* ICONS */
+
 .project-icons {
   display: flex;
   gap: 14px;
@@ -299,7 +290,6 @@
   font-size: 13px;
 }
 
-/* CONTENT */
 .project-content {
   padding: 16px;
   text-align: center;
@@ -328,7 +318,6 @@
   }
 }
 
-/* MOBILE */
 @media (max-width: 640px) {
   .expand-section {
     padding: 40px 16px;
@@ -348,4 +337,8 @@
   .project-thumb {
     height: 220px;
   }
+  .about-accordion-header span {
+    font-size: 20px;
+    line-height: 1;
+}
 }
