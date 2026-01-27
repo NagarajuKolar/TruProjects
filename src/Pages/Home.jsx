@@ -1,10 +1,14 @@
 import React from 'react'
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import '../CSS/Home.css';
 import ban1 from '../assets/ban1.png'
 import ban2 from '../assets/ban2.png'
 import ban3 from '../assets/ban3.png'
 import ban4 from '../assets/ban4.png'
+import mobBanner1 from '../assets/mobBan.png';
+import mobBanner2 from '../assets/mobBan2.png';
+import mobBanner3 from '../assets/mobBan3.png';
 import { FaChevronRight } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa6";
 import { FaPlusCircle } from "react-icons/fa";
@@ -29,13 +33,14 @@ import service10 from '../assets/serv10.png'
 import aboutimage from '../assets/about.png'
 
 function Home() {
-    const images = [
-        ban1,
-        ban2,
-        ban3,
-        ban4,
-    ];
+    const desktopImages = [ban1, ban2, ban3];
+
+    const mobileImages = [mobBanner1, mobBanner2, mobBanner3];
+
     const [openIndexes, setOpenIndexes] = useState([0]);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const intervalRef = useRef(null);
+
     const touchstartX = useRef(null)
     const handleStartTouch = (e) => {
         touchstartX.current = e.touches[0].clientX;
@@ -50,6 +55,16 @@ function Home() {
 
         touchstartX.current = null;
     };
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    const images = isMobile ? mobileImages : desktopImages;
 
 
     const handleToggle = (index) => {
@@ -105,17 +120,18 @@ function Home() {
     };
 
     const services = [
-        { title: "B.Tech Projects", image: service1 },
-        { title: "M.Tech Projects", image: service2 },
-        { title: "Mini Projects", image: service3 },
-        { title: "Major Projects", image: service4 },
-        { title: "IEEE Projects", image: service5 },
-        { title: "Bulk Sale", image: service6 },
-        { title: "Paper writing & Publishing", image: service7 },
-        { title: "Document writing with plagiarism", image: service8 },
-        { title: "Summer Internships", image: service9 },
-        { title: "Trainings", image: service10 },
+        { title: "B.Tech Projects", image: service1, path: "/btech" },
+        { title: "M.Tech Projects", image: service2, path: "/mtech" },
+        { title: "Mini Projects", image: service3, path: "/mini-projects" },
+        { title: "Major Projects", image: service4, path: "/major-projects" },
+        { title: "IEEE Projects", image: service5, path: "/ieee" },
+        { title: "Bulk Sale", image: service6, path: "/bulk-sale" },
+        { title: "Paper writing & Publishing", image: service7, path: "/research" },
+        { title: "Document writing with plagiarism", image: service8, path: "/document-writing" },
+        { title: "Summer Internships", image: service9, path: "/internships" },
+        { title: "Trainings", image: service10, path: "/internships" },
     ];
+
 
 
     const technologies = [
@@ -131,9 +147,17 @@ function Home() {
         { id: 10, title: "Data Mining", image: tech2 },
     ];
     useEffect(() => {
-        const timer = setInterval(nextSlide, 4000);
-        return () => clearInterval(timer);
-    }, []);
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+
+        intervalRef.current = setInterval(() => {
+            nextSlide();
+        }, 5000);
+
+        return () => clearInterval(intervalRef.current);
+    }, [currentSlide]);
+
     return (
         <>
             <div className="slider"
@@ -162,13 +186,13 @@ function Home() {
 
                 <div className="services-grid">
                     {services.map((item, index) => (
-                        <div className="service-card" key={index}>
+                        <Link to={item.path} className="service-card" key={index}>
                             <div className="service-img">
                                 <img src={item.image} alt={item.title} />
                             </div>
                             <p>{item.title}</p>
 
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </section>

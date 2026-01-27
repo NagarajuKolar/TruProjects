@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/Navbar.css";
 import { Link } from "react-router-dom";
+import Logo from '../assets/Logo.png'
 import { FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -93,13 +94,32 @@ function Navbar() {
                 <div className="top-left">
                     <span>91-9676190678</span>
                     <span>info@truprojects.in</span>
-                    <a href="#"><FaFacebookF /></a>
-                    <a href="#"><FaXTwitter /></a>
-                    <a href="#"><FaLinkedinIn /></a>
-                    <a href="#"><FaYoutube /></a>
-                    <a href="#"><FaPinterestP /></a>
-                    <a href="#"><FaInstagram /></a>
+
+                    <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer">
+                        <FaFacebookF />
+                    </a>
+
+                    <a href="https://twitter.com/login" target="_blank" rel="noopener noreferrer">
+                        <FaXTwitter />
+                    </a>
+
+                    <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer">
+                        <FaLinkedinIn />
+                    </a>
+
+                    <a href="https://www.youtube.com/account" target="_blank" rel="noopener noreferrer">
+                        <FaYoutube />
+                    </a>
+
+                    <a href="https://www.pinterest.com/login/" target="_blank" rel="noopener noreferrer">
+                        <FaPinterestP />
+                    </a>
+
+                    <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer">
+                        <FaInstagram />
+                    </a>
                 </div>
+
                 <div className="top-right">
                     <button className="register-btn">
                         <Link to='/register'>Register Now</Link>
@@ -109,8 +129,7 @@ function Navbar() {
 
             <nav className="navbar" onMouseLeave={() => !isMobile && setActiveMenu(null)}>
                 <div className="logo">
-                    <span className="logo-main">Tru</span>
-                    <span className="logo-sub">Projects</span>
+                    <img src={Logo} alt="Logo TruProject" />
                 </div>
 
                 <div className={`nav-links ${menuOpen ? "active" : ""}`}>

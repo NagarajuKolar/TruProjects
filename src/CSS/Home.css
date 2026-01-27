@@ -33,7 +33,7 @@
   padding: 10px;
   border-radius: 50%;
   transition: background 0.3s ease;
-  
+
 }
 
 /* .arrow:hover {
@@ -104,6 +104,7 @@
   text-align: center;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .service-card:hover {
@@ -123,9 +124,10 @@
 .service-card:hover p {
   color: #ff3b6a;
 }
+
 .service-img {
   width: 80px;
-    height: 80px;
+  height: 80px;
   margin: 0 auto 15px;
   border-radius: 50%;
   display: flex;
@@ -192,6 +194,7 @@
 .about-title {
   font-size: 32px;
   margin-bottom: 25px;
+  text-align: left;
 }
 
 .about-title span {
@@ -331,7 +334,8 @@
 
 .tech-title span {
   color: #ff0033;
-  border-bottom: 2px solid #ff0033;
+  border-bottom: 3px solid #ff0033;
+  padding-bottom: 2px;
 }
 
 .tech-grid {
@@ -402,7 +406,7 @@
   }
 
   .slider {
-    height: 280px;
+    height: 400px;
   }
 
   .arrow {
@@ -428,6 +432,11 @@
     padding: 40px 20px;
   }
 
+  .about-left img {
+    width: 90%;
+    border-radius: 6px;
+  }
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -435,12 +444,13 @@
   .about-container {
     grid-template-columns: 1fr;
   }
-    .technology {
+
+  .technology {
     padding: 30px 20px;
   }
-
-
-
+  .about-accordion-body .about-list li {
+    text-align: left;
+}
   .about-accordion-header {
     font-size: 16px;
     padding: 14px 18px;
@@ -476,16 +486,32 @@
     flex-wrap: wrap;
     gap: 12px;
   }
+
+  .about-title {
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .tech-title {
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  }
+  .about-title span {
+    color: #e91e63;
+    border-bottom: 3px solid #e91e63;
+    padding-bottom: 0px;
+  }
 }
 
 
 @media (max-width: 480px) {
   .slider {
-    height: 220px;
+    height: 460px;
   }
 
   .arrow {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 5px;
   }
 

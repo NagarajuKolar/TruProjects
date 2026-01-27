@@ -34,6 +34,7 @@ function App() {
         <Route path="/:program/:branch" element={<BranchProjectspage />} />
         <Route path='/:program/:branch/:type' element={<DomainPage />} />
         <Route path='/internships' element={<SummerInternship/>}/>
+        <Route path="/internships/:slug" element={<SummerInternship />} />
 
 
 

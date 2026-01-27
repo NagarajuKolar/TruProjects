@@ -11,10 +11,21 @@ import ben4 from '../assets/ben4.png'
 import ben5 from '../assets/ben5.png'
 import ben6 from '../assets/ben6.png'
 import InternshipTracks from '../Components/InternshipTracks'
+import Training from '../Components/Training'
+import { Link, useParams } from 'react-router-dom'
+import { trainings } from '../Utils/TrainingData'
 function SummerInternship() {
     const [showMore, setShowMore] = useState(false);
+    const { slug } = useParams();
+
+    const selectedTraining = slug
+        ? trainings.find(t => t.slug === slug)
+        : null;
+
     return (
         <>
+            <Training selectedTraining={selectedTraining} />
+
 
             <section className="registration-section">
                 <h2 className="section-title">
@@ -85,7 +96,8 @@ function SummerInternship() {
                 </button>
             </section>
 
-            <InternshipTracks/>
+            <InternshipTracks selectedTrack={selectedTraining?.trackId} />
+
 
             <section className="benefits-section">
                 <h2 className="section-title">

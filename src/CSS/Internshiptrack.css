@@ -72,6 +72,16 @@
   font-size: 22px;
   font-weight: 700;
 }
+.tracks-grid.single-track {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.tracks-grid.single-track .track-column {
+  width: 100%;
+  max-width: 720px;
+}
+
 
 .accordion-body {
   max-height: 0;
