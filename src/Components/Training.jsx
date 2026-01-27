@@ -18,17 +18,14 @@ function Training({ selectedTraining }) {
       )} */}
 
       <h1>
-        {selectedTraining
-          ? selectedTraining.title
-          : "SUMMER INTERNSHIPS"}
+        {selectedTraining ? selectedTraining.title : "SUMMER INTERNSHIPS"}
       </h1>
 
       <div className="training-buttons">
         {visibleChips.map(item => (
           <Link
             key={item.slug} to={`/internships/${item.slug}`}
-            className={`training-chip ${selectedTraining?.slug === item.slug ? "active" : ""
-              }`}>
+            className={`training-chip ${selectedTraining?.slug === item.slug ? "active" : ""}`}>
             {item.tag}
           </Link>
         ))}

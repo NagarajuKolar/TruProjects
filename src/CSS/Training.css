@@ -126,7 +126,7 @@
 .twit-icon{
     background: black;
 }
-.register-btn {
+.info-box .register-btn {
   background: #e91e63;
   color: white;
   border: none;
@@ -136,7 +136,7 @@
   transition: 0.25s;
 }
 
-.register-btn:hover {
+.info-box .register-btn:hover {
   opacity: 0.9;
 }
 
@@ -243,8 +243,8 @@
     line-height: 1.9;
   }
 
-  .register-btn {
-    width: 60%;
+  .info-box .register-btn {
+    width: 55%;
     padding: 10px 0;
     font-size: 15px;
     border-radius: 4px;
