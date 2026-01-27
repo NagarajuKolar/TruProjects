@@ -16,7 +16,23 @@ import Locationstriper from '../Components/Locationstriper';
 
 function ProgramPage() {
     const { program } = useParams();
-    const title = program === "btech" ? "B.Tech Projects" : "M.Tech Projects";
+    const programConfig = {
+        btech: {
+            label: "B.Tech",
+            title: "B.Tech Projects",
+        },
+        mtech: {
+            label: "M.Tech",
+            title: "M.Tech Projects",
+        },
+        ieee: {
+            label: "IEEE",
+            title: "IEEE Projects",
+        },
+    };
+    const programInfo = programConfig[program];
+    const title = programInfo?.title || "Projects";
+
     const branches = [
         { name: "CSE", slug: "cse", image: cse },
         { name: "ECE", slug: "ece", image: cse },
@@ -48,12 +64,25 @@ function ProgramPage() {
             "M.Tech Projects Noida",
             "M.Tech Projects Coimbatore",
         ],
+        ieee:[
+            "IEEE Projects Chennai",
+            'IEEE Projects Ananthapur',
+            "IEEE Projects Bangalore",
+            "IEEE Projects Guntur",
+            "IEEE Projects Kakinada",
+            "IEEE Projects Tirupati",
+            'IEEE Projects Vijayawada',
+            'IEEE Projects Vizag',
+            "IEEE Projects Delhi"
+
+        ]
     };
     const pageData = {
-        program: program === "btech" ? "B.Tech" : "M.Tech",
+        program: programInfo?.label || "",
         branch: "",
         type: "",
     };
+
 
     const previewText = formatContent(
         contentTemplate.preview,
@@ -77,8 +106,9 @@ function ProgramPage() {
 
             <div className="program-container">
                 <h2 className="section-title">
-                    {program === "btech" ? "B.TECH" : "M.TECH"} <span>BRANCHES</span>
+                    {programInfo?.label} <span>BRANCHES</span>
                 </h2>
+
 
 
                 <div className="branch-grid">

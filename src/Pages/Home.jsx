@@ -122,8 +122,8 @@ function Home() {
     const services = [
         { title: "B.Tech Projects", image: service1, path: "/btech" },
         { title: "M.Tech Projects", image: service2, path: "/mtech" },
-        { title: "Mini Projects", image: service3, path: "/mini-projects" },
-        { title: "Major Projects", image: service4, path: "/major-projects" },
+        { title: "Mini Projects", image: service3, path: "/btech" },
+        { title: "Major Projects", image: service4, path: "/mtech" },
         { title: "IEEE Projects", image: service5, path: "/ieee" },
         { title: "Bulk Sale", image: service6, path: "/bulk-sale" },
         { title: "Paper writing & Publishing", image: service7, path: "/research" },
