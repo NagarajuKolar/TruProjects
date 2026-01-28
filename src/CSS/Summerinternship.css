@@ -62,13 +62,13 @@
   cursor: pointer;
 }
 
-.about-section {
+.abt-section {
   padding: 30px 10%;
   position: relative;
   text-align: center;
 }
 
-.about-section p {
+.abt-section p {
   text-align: left;
   line-height: 1.8;
   color: #444;
@@ -98,14 +98,14 @@
   margin-bottom: 50px;
 }
 
-.about-section .section-title {
+.abt-section .section-title {
   display: inline-block;
   position: relative;
   text-align: center;
   margin-bottom: 18px;
 }
 
-.about-section .section-title::after {
+.abt-section .section-title::after {
   content: "";
   position: absolute;
   left: 0;
@@ -160,7 +160,7 @@
     grid-template-columns: 1fr;
   }
 
-  .about-section .section-title {
+  .abt-section .section-title {
     font-size: 26px;
     position: relative;
   }
@@ -173,7 +173,7 @@
     grid-template-columns: 1fr;
   }
 
-  .about-section {
+  .abt-section {
     padding: 60px 8%;
   }
 
@@ -190,13 +190,13 @@
     font-size: 28px !important;
   }
 
-  .about-section .section-title {
+  .abt-section .section-title {
     display: block;
     text-align: left;
     margin-left: 0;
   }
 
-  .about-section {
+  .abt-section {
     padding: 60px 3%;
   }
 
@@ -212,12 +212,12 @@
 
   } */
 
-  .about-section .section-title {
+  .abt-section .section-title {
     font-size: 25px;
 
   }
 
-  .about-section {
+  .abt-section {
     padding: 40px 3%;
   }
 

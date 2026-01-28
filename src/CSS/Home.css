@@ -57,8 +57,8 @@
 
 .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   margin: 0 5px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
@@ -173,7 +173,7 @@
 }
 
 .about-section {
-  padding: 80px 0;
+  padding: 40px 0;
   background: #fff;
 }
 
@@ -213,8 +213,8 @@
   background: #e91e63;
   color: #fff;
   border: none;
-  padding: 16px 22px;
-  font-size: 18px;
+  padding: 15px 22px;
+  font-size: 19px;
   font-weight: 500;
   display: flex;
   justify-content: space-between;
@@ -224,7 +224,7 @@
 }
 
 .about-accordion-header span {
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1;
 }
 
@@ -239,8 +239,9 @@
 .about-accordion-body p {
   font-size: 16px;
   line-height: 1.8;
-  margin-bottom: 15px;
+  margin-bottom: 15px !important;
   color: #444;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -327,8 +328,9 @@
 }
 
 .tech-title {
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 28px;
+  font-weight: 700;
+
   margin-bottom: 30px;
 }
 
@@ -349,6 +351,7 @@
   align-items: center;
   background: #f2f2f2;
   padding: 10px;
+  transition:all  0.3s ease;
 }
 
 .tech-card img {
@@ -380,6 +383,24 @@
   color: #452e4e;
   text-decoration: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.tech-links a:hover {
+  color: #c2185b;
+}
+.tech-links a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 1px;
+  background-color: #583827;
+}
+
+.tech-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
 }
 
 
@@ -423,8 +444,8 @@
   }
 
   .dot {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     margin: 0 4px;
   }
 
@@ -448,9 +469,11 @@
   .technology {
     padding: 30px 20px;
   }
+
   .about-accordion-body .about-list li {
     text-align: left;
-}
+  }
+
   .about-accordion-header {
     font-size: 16px;
     padding: 14px 18px;
@@ -464,7 +487,7 @@
   }
 
   .technology {
-    padding: 10px 0;
+    padding: 10px 5px;
   }
 
   .tech-card {
@@ -484,7 +507,13 @@
 
   .tech-links {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 20px;
+    color: #ff0033;
+  }
+
+  .tech-links a {
+    color: #ff0033;
+
   }
 
   .about-title {
@@ -497,6 +526,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
   }
+
   .about-title span {
     color: #e91e63;
     border-bottom: 3px solid #e91e63;

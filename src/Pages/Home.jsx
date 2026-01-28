@@ -19,6 +19,10 @@ import tech3 from '../assets/tech3.png'
 import tech4 from '../assets/tech4.png'
 import tech5 from '../assets/tech5.png'
 import tech6 from '../assets/tech6.png'
+import tech7 from '../assets/tech7.png'
+import tech8 from '../assets/tech8.png'
+import tech9 from '../assets/tech9.png'
+import tech10 from '../assets/tech10.png'
 import Testimonials from '../Components/Testimonials';
 import service1 from '../assets/serv1.png'
 import service2 from '../assets/serv2.png'
@@ -132,20 +136,19 @@ function Home() {
         { title: "Trainings", image: service10, path: "/internships" },
     ];
 
-
-
     const technologies = [
-        { id: 1, title: "Machine Learning", image: tech1 },
-        { id: 2, title: "Artificial Intelligence", image: tech2 },
-        { id: 3, title: "Deep Learning", image: tech3 },
-        { id: 4, title: "Image Processing", image: tech4 },
-        { id: 5, title: "Python", image: tech5 },
-        { id: 6, title: "Java", image: tech6 },
-        { id: 7, title: "Big Data", image: tech1 },
-        { id: 8, title: "Block Chain", image: tech2 },
-        { id: 9, title: "Cloud Computing", image: tech1 },
-        { id: 10, title: "Data Mining", image: tech2 },
+        { id: 1, title: "Machine Learning", slug: "machine-learning", image: tech1 },
+        { id: 2, title: "Artificial Intelligence", slug: "artificial-intelligence", image: tech2 },
+        { id: 3, title: "Deep Learning", slug: "deep-learning", image: tech3 },
+        { id: 4, title: "Image Processing", slug: "image-processing", image: tech4 },
+        { id: 5, title: "Python", slug: "python", image: tech5 },
+        { id: 6, title: "Java", slug: "java", image: tech6 },
+        { id: 7, title: "Big Data", slug: "big-data", image: tech7 },
+        { id: 8, title: "Block Chain", slug: "block-chain", image: tech8 },
+        { id: 9, title: "Cloud Computing", slug: "cloud-computing", image: tech9 },
+        { id: 10, title: "Data Mining", slug: "data-mining", image: tech10 }
     ];
+
     useEffect(() => {
         if (intervalRef.current) {
             clearInterval(intervalRef.current);
@@ -153,7 +156,7 @@ function Home() {
 
         intervalRef.current = setInterval(() => {
             nextSlide();
-        }, 5000);
+        }, 6000);
 
         return () => clearInterval(intervalRef.current);
     }, [currentSlide]);
@@ -225,10 +228,8 @@ function Home() {
 
                                     <div
                                         className={`about-accordion-body about-box ${isOpen ? "open" : ""
-                                            }`}
-                                    >
-                                        {item.type === "paragraph" &&
-                                            item.content.map((text, i) => (
+                                            }`}>
+                                        {item.type === "paragraph" && item.content.map((text, i) => (
                                                 <p key={i}>{text}</p>
                                             ))}
 
@@ -263,10 +264,11 @@ function Home() {
                                 <h3>{tech.title}</h3>
 
                                 <div className="tech-links">
-                                    <a href="#">Mini Project</a>
-                                    <a href="#">Major Project</a>
-                                    <a href="#">View Project Titles</a>
+                                    <Link to={`/btech/cse/mini/${tech.slug}`}> Mini Project</Link>
+                                    <Link to={`/btech/cse/major/${tech.slug}`}> Major Project</Link>
+                                    <Link to={`/btech/cse/major/${tech.slug}`}>View Project Titles </Link>
                                 </div>
+
                             </div>
                         </div>
                     ))}

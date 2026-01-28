@@ -209,10 +209,7 @@ function Researchpaper() {
                 <div className="journal-modal">
                     <div className="journal-modal-content animate-pop">
 
-                        <span
-                            className="close-btn"
-                            onClick={() => setShowModal(false)}
-                        >
+                        <span className="close-btn" onClick={() => setShowModal(false)} >
                             <IoMdClose/>
                         </span>
 
@@ -227,11 +224,7 @@ function Researchpaper() {
                             <GrPrevious />
                         </span>
 
-                        <img
-                            src={logos[activeIndex]}
-                            alt="active-logo"
-                            className="modal-image"
-                        />
+                        <img  src={logos[activeIndex]}  alt="active-logo" className="modal-image"/>
 
                         <span
                             className="nav-arrow right"

@@ -1,6 +1,6 @@
 export const contentTemplate = {
     preview: `
-“Focus your entire mind on the {{program}} {{branch}} {{type}} Projects.
+“Focus your entire mind on the {{program}} {{branch}} {{type}} {{subject}} Projects.
 The sun’s rays do not begin to burn until they are focused.”Even the tiniest activities 
 should be done with your heart, mind, and soul.
 This is the key to achieving success. You might spark your friend’s interest
@@ -41,7 +41,7 @@ our unique range of projects, let’s look at a few distinct fields and their ap
 So that you can choose the project that best meets your needs from our comprehensive
 list of Final Year academic projects.
 
-Tru Projects is the best opportunity for {{program}} {{branch}} {{type}} Projects
+Tru Projects is the best opportunity for {{program}} {{branch}} {{type}} {{subject}} Projects
 with Source Code and Document, providing best in class career oriented & real time
 projects for engineering students in Hyderabad. We provide actual competency-based
 projects for engineering students in Hyderabad with ensure quality, and lower your
@@ -49,7 +49,7 @@ expenditures.
 
 Never be afraid to take bold action and live the life you’ve always imagined.
 Be Bold and take the opportunity to join in Tru Projects for {{program}} {{branch}}
-{{type}} Projects. By going, you will be a more desirable candidate than your peers
+{{type}} {{subject}} Projects. By going, you will be a more desirable candidate than your peers
 when it comes time to hunt for a full-time job after taking {{program}} academic
 projects.
 

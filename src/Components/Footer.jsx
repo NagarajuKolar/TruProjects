@@ -3,13 +3,13 @@ import '../CSS/Footer.css'
 
 function Footer() {
   return (
-      <footer className="footer">
+    <footer className="footer">
       <div className="footer-overlay">
 
-       
+
         <div className="footer-container">
 
-         
+
           <div className="footer-col">
             <h3>About Us</h3>
             <p>
@@ -40,16 +40,34 @@ function Footer() {
             </div>
 
             <div className="footer-socials">
-              <i className="fab fa-facebook-f"></i>
-              <i className="fab fa-x-twitter"></i>
-              <i className="fab fa-instagram"></i>
-              <i className="fab fa-linkedin-in"></i>
-              <i className="fab fa-youtube"></i>
-              <i className="fab fa-pinterest-p"></i>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-x-twitter"></i>
+              </a>
+
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-instagram"></i>
+              </a>
+
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+
+              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-youtube"></i>
+              </a>
+
+              <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-pinterest-p"></i>
+              </a>
             </div>
+
           </div>
 
-          
+
           <div className="footer-col footer-links">
             <h3>Quick Links</h3>
 
@@ -99,7 +117,7 @@ function Footer() {
 
         </div>
 
-       
+
         <div className="footer-bottom">
           <p>© Copyright – 2025 TruProjects. All Rights Reserved.</p>
           <p><strong>Visitors Count:</strong> 1429990</p>

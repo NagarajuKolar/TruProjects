@@ -51,7 +51,7 @@ function SummerInternship() {
                 </div>
             </section>
 
-            <section className="about-section">
+            <section className="abt-section">
                 <h2 className="section-title">
                     About Summer <span>Internship</span>
                 </h2>

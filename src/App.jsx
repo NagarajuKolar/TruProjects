@@ -15,6 +15,7 @@ import Register from './Pages/Register'
 import DocumentWriting from './Pages/DocumentWriting'
 import DomainPage from './Pages/DomainPage'
 import SummerInternship from './Pages/SummerInternship'
+import SubjectPage from './Pages/SubjectPage'
 
 
 function App() {
@@ -30,12 +31,14 @@ function App() {
         <Route path='/contact' element={<Contactus />} />
         <Route path='/register' element={<Register />} />
         <Route path='/document-writing' element={<DocumentWriting />} />
+
+        <Route path='/internships' element={<SummerInternship />} />
+        <Route path="/internships/:slug" element={<SummerInternship />} />
+
         <Route path='/:program' element={<ProgramPage />} />
         <Route path="/:program/:branch" element={<BranchProjectspage />} />
         <Route path='/:program/:branch/:type' element={<DomainPage />} />
-        <Route path='/internships' element={<SummerInternship/>}/>
-        <Route path="/internships/:slug" element={<SummerInternship />} />
-
+        <Route path='/:program/:branch/:type/:subject' element={<SubjectPage/>}/>
 
 
 

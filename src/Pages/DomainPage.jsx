@@ -54,8 +54,7 @@ function DomainPage() {
                         <Link
                             key={item.slug}
                             to={`/${program}/${branch}/${type}/${item.slug}`}
-                            className="domain-card"
-                        >
+                            className="domain-card">
                             <img src={item.image} alt={item.name} />
                             <p>{item.name}</p>
                         </Link>

@@ -1,0 +1,170 @@
+
+.subject-section {
+
+  padding: 40px 80px;
+  background: #fff;
+
+}
+
+
+.subject-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.subject-table thead {
+  background: #e91e63;
+}
+
+.subject-table th {
+  padding: 14px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.subject-table td {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #eee;
+}
+
+.subject-table tbody tr:hover {
+  background-color: #fdf2f8;
+}
+
+
+
+.pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #e91e63;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pdf-link i {
+  font-size: 14px;
+}
+
+.pdf-link:hover {
+  color: #c2185b;
+  text-decoration: underline;
+}
+
+
+
+.subject-table td[colspan="3"] {
+  padding: 20px;
+  font-style: italic;
+  color: #6b7280;
+}
+.para{
+    margin: 20px auto;
+      padding: 20px 130px;
+      
+}
+.para p{
+    line-height: 1.6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    margin:20px 0;
+    color: #555252;
+    font-size: 14px;
+}
+.para span{
+    color:#d73232;
+    font-weight: 600;
+}
+.para b{
+    font-weight: 600;
+}
+@media (max-width: 1024px) {
+  .subject-section {
+    padding: 30px 40px;
+  }
+
+  .para {
+    padding: 20px 60px;
+  }
+
+  .subject-table th,
+  .subject-table td {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+.subject-section {
+
+  padding: 30px 10px;
+  background: #fff;
+
+}
+
+@media (max-width: 768px) {
+
+  .subject-section {
+    padding: 25px 11px;
+  }
+
+  .para {
+    padding: 15px 20px;
+  }
+
+  .para p {
+    font-size: 14px;
+  }
+
+  /* .subject-table {
+    display: block;
+    overflow-x: auto;
+  } */
+
+  .subject-table th,
+  .subject-table td {
+    font-size: 12.5px;
+    padding: 8px;
+  }
+}
+
+
+  .subject-table th,
+  .subject-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+
+  .subject-section {
+    padding: 20px 8px;
+  }
+
+  .para {
+    padding: 10px 12px;
+  }
+
+  .para p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .pdf-link {
+    font-size: 12px;
+  }
+
+  .subject-table th,
+  .subject-table td {
+    font-size: 12px;
+  }
+}
