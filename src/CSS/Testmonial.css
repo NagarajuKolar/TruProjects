@@ -25,6 +25,8 @@
   font-size: 18px;
   line-height: 1.7;
   margin-bottom: 30px;
+  padding: 0px 20px;
+    text-align: justify;
 }
 
 .youtube-btn {
