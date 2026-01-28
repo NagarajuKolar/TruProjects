@@ -452,10 +452,14 @@
   .services {
     padding: 40px 20px;
   }
+  .about-left {
+    justify-self: center;   
+  }
 
   .about-left img {
-    width: 90%;
-    border-radius: 6px;
+    width: 85%;
+    display: block;
+    margin: 0 auto;
   }
 
   .services-grid {
@@ -464,6 +468,7 @@
 
   .about-container {
     grid-template-columns: 1fr;
+    padding: 10px !important;
   }
 
   .technology {
