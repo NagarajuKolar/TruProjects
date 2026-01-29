@@ -21,6 +21,9 @@
 .top-left a{
     color: white;
 }
+.top-left a:hover{
+    color: rgb(238, 7, 7);
+}
 .mega-column h4 {
   cursor: pointer;
 }

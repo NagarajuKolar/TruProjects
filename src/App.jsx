@@ -16,6 +16,7 @@ import DocumentWriting from './Pages/DocumentWriting'
 import DomainPage from './Pages/DomainPage'
 import SummerInternship from './Pages/SummerInternship'
 import SubjectPage from './Pages/SubjectPage'
+import ScrollToTop from './Components/ScrollToTop'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<Aboutus />} />
