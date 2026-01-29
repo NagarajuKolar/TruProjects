@@ -1,5 +1,6 @@
 import React from 'react'
 import '../CSS/Footer.css'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -40,7 +41,7 @@ function Footer() {
             </div>
 
             <div className="footer-socials">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/truprojects1/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-facebook-f"></i>
               </a>
 
@@ -52,11 +53,11 @@ function Footer() {
                 <i className="fab fa-instagram"></i>
               </a>
 
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/tru-projects/" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin-in"></i>
               </a>
 
-              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/channel/UCcwZ26sm2QtHjilZjCENIAg" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-youtube"></i>
               </a>
 
@@ -73,39 +74,55 @@ function Footer() {
 
             <div className="footer-links-grid">
               <ul>
-                <li>Home</li>
-                <li>Contact Us</li>
-                <li>Trainings</li>
-                <li>B.Tech Projects</li>
-                <li>M.Tech Projects</li>
-                <li>B.Tech CSE Mini Projects</li>
-                <li>B.Tech CSE Major Projects</li>
-                <li>M.Tech CSE Mini Projects</li>
-                <li>M.Tech CSE Major Projects</li>
-                <li>Final Year Projects</li>
-                <li>IEEE Projects</li>
+                <ul>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/contact">Contact Us</Link></li>
+                  <li><Link to="/internships">Trainings</Link></li>
+
+                  <li><Link to="/btech">B.Tech Projects</Link></li>
+                  <li><Link to="/mtech">M.Tech Projects</Link></li>
+
+                  <li><Link to="/btech/cse/mini">B.Tech CSE Mini Projects</Link></li>
+                  <li><Link to="/btech/cse/major">B.Tech CSE Major Projects</Link></li>
+
+                  <li><Link to="/mtech/cse/mini">M.Tech CSE Mini Projects</Link></li>
+                  <li><Link to="/mtech/cse/major">M.Tech CSE Major Projects</Link></li>
+
+                  <li><Link to="/btech">Final Year Projects</Link></li>
+                  <li><Link to="/ieee">IEEE Projects</Link></li>
+                </ul>
+
               </ul>
 
               <ul>
-                <li>B.Tech ECE Mini Projects</li>
-                <li>B.Tech ECE Major Projects</li>
-                <li>M.Tech ECE Mini Projects</li>
-                <li>M.Tech ECE Major Projects</li>
-                <li>B.Tech EEE Mini Projects</li>
-                <li>B.Tech EEE Major Projects</li>
-                <li>M.Tech EEE Mini Projects</li>
-                <li>M.Tech EEE Major Projects</li>
-                <li>B.Tech Civil Mini Projects</li>
-                <li>B.Tech Civil Major Projects</li>
+                <ul>
+                  <li><Link to="/btech/ece/mini">B.Tech ECE Mini Projects</Link></li>
+                  <li><Link to="/btech/ece/major">B.Tech ECE Major Projects</Link></li>
+
+                  <li><Link to="/mtech/ece/mini">M.Tech ECE Mini Projects</Link></li>
+                  <li><Link to="/mtech/ece/major">M.Tech ECE Major Projects</Link></li>
+
+                  <li><Link to="/btech/eee/mini">B.Tech EEE Mini Projects</Link></li>
+                  <li><Link to="/btech/eee/major">B.Tech EEE Major Projects</Link></li>
+
+                  <li><Link to="/mtech/eee/mini">M.Tech EEE Mini Projects</Link></li>
+                  <li><Link to="/mtech/eee/major">M.Tech EEE Major Projects</Link></li>
+
+                  <li><Link to="/btech/civil/mini">B.Tech Civil Mini Projects</Link></li>
+                  <li><Link to="/btech/civil/major">B.Tech Civil Major Projects</Link></li>
+                </ul>
+
               </ul>
 
               <ul>
-                <li>M.Tech Civil Mini Projects</li>
-                <li>M.Tech Civil Major Projects</li>
-                <li>B.Tech Mechanical Mini Projects</li>
-                <li>B.Tech Mechanical Major Projects</li>
-                <li>M.Tech Mechanical Mini Projects</li>
-                <li>M.Tech Mechanical Major Projects</li>
+                <li><Link to="/mtech/civil/mini">M.Tech Civil Mini Projects</Link></li>
+                <li><Link to="/mtech/civil/major">M.Tech Civil Major Projects</Link></li>
+
+                <li><Link to="/btech/mechanical/mini">B.Tech Mechanical Mini Projects</Link></li>
+                <li><Link to="/btech/mechanical/major">B.Tech Mechanical Major Projects</Link></li>
+
+                <li><Link to="/mtech/mechanical/mini">M.Tech Mechanical Mini Projects</Link></li>
+                <li><Link to="/mtech/mechanical/major">M.Tech Mechanical Major Projects</Link></li>
                 <li>MBA Marketing Projects</li>
                 <li>MBA HR Projects</li>
                 <li>MBA Finance Projects</li>

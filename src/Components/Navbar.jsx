@@ -95,7 +95,7 @@ function Navbar() {
                     <span>91-9676190678</span>
                     <span>info@truprojects.in</span>
 
-                    <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/truprojects1/" target="_blank" rel="noopener noreferrer">
                         <FaFacebookF />
                     </a>
 
@@ -103,15 +103,15 @@ function Navbar() {
                         <FaXTwitter />
                     </a>
 
-                    <a href="https://www.linkedin.com/login" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/company/tru-projects/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedinIn />
                     </a>
 
-                    <a href="https://www.youtube.com/account" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/channel/UCcwZ26sm2QtHjilZjCENIAg" target="_blank" rel="noopener noreferrer">
                         <FaYoutube />
                     </a>
 
-                    <a href="https://www.pinterest.com/login/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.pinterest.com/truprojects/" target="_blank" rel="noopener noreferrer">
                         <FaPinterestP />
                     </a>
 
