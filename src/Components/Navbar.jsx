@@ -146,18 +146,18 @@ function Navbar() {
                             <div className="mega-menu">
                                 <div className="mega-column">
                                     <h4 onClick={() => navigate("/btech/cse")}>CSE </h4>
-                                    <Link to="/btech/cse/major">Major Projects</Link>
-                                    <Link to="/btech/cse/mini">Mini Projects</Link>
+                                    <Link to="/btech/cse/projects/major">Major Projects</Link>
+                                    <Link to="/btech/cse/projects/mini">Mini Projects</Link>
                                 </div>
                                 <div className="mega-column">
                                     <h4 onClick={() => navigate("/btech/ece")}>ECE</h4>
-                                    <Link to="/btech/ece/major">Major Projects</Link>
-                                    <Link to="/btech/ece/mini">Mini Projects</Link>
+                                    <Link to="/btech/ece/projects/major">Major Projects</Link>
+                                    <Link to="/btech/ece/projects/mini">Mini Projects</Link>
                                 </div>
                                 <div className="mega-column">
                                     <h4 onClick={() => navigate("/btech/eee")}>EEE</h4>
-                                    <Link to="/btech/eee/major">Major Projects</Link>
-                                    <Link to="/btech/eee/mini">Mini Projects</Link>
+                                    <Link to="/btech/eee/projects/major">Major Projects</Link>
+                                    <Link to="/btech/eee/projects/mini">Mini Projects</Link>
                                 </div>
                             </div>
                         )}
@@ -216,18 +216,18 @@ function Navbar() {
                             <div className="mega-menu">
                                 <div className="mega-column">
                                     <h4 onClick={() => navigate("/mtech/cse")}>CSE</h4>
-                                    <Link to="/mtech/cse/major">Major Projects</Link>
-                                    <Link to="/mtech/cse/mini">Mini Projects</Link>
+                                    <Link to="/mtech/cse/projects/major">Major Projects</Link>
+                                    <Link to="/mtech/cse/projects/mini">Mini Projects</Link>
                                 </div>
                                 <div className="mega-column">
                                     <h4 onClick={() => navigate("/mtech/ece")}>ECE</h4>
-                                    <Link to="/mtech/ece/major">Major Projects</Link>
-                                    <Link to="/mtech/ece/mini">Mini Projects</Link>
+                                    <Link to="/mtech/ece/projects/major">Major Projects</Link>
+                                    <Link to="/mtech/ece/projects/mini">Mini Projects</Link>
                                 </div>
                                 <div className="mega-column">
                                     <h4 onClick={() => navigate("/mtech/eee")}>EEE</h4>
-                                    <Link to="/mtech/eee/major">Major Projects</Link>
-                                    <Link to="/mtech/eee/mini">Mini Projects</Link>
+                                    <Link to="/mtech/eee/projects/major">Major Projects</Link>
+                                    <Link to="/mtech/eee/projects/mini">Mini Projects</Link>
                                 </div>
                             </div>
                         )}

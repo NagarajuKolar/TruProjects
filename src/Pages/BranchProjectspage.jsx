@@ -10,7 +10,7 @@ import { btechCities, mtechCities } from '../Utils/BranchlocationData';
 
 
 function BranchProjectspage() {
-    const { program, branch } = useParams();
+    const { program, branch, city } = useParams();
     const programName = program === "btech" ? "B.Tech" : "M.Tech";
     const branchName = branch.toUpperCase();
     const pageData = {
@@ -38,7 +38,11 @@ function BranchProjectspage() {
     return (
         <>
             <div className="branch-banner">
-                <h1>{programName} {branchName} Projects</h1>
+                <h1>
+                    {programName} {branchName} Projects{" "}
+                    {city && city.toUpperCase() }
+                </h1>
+
             </div>
 
             <div className="project-type-section">
@@ -85,7 +89,9 @@ function BranchProjectspage() {
                 previewText={previewText}
                 fullText={fullText} />
 
-            <Locationstriper locations={citylocations} />
+            <Locationstriper
+                locations={citylocations}
+                basePath={`/${program}/${branch}/city`} />
 
 
         </>

@@ -82,11 +82,11 @@ function Footer() {
                   <li><Link to="/btech">B.Tech Projects</Link></li>
                   <li><Link to="/mtech">M.Tech Projects</Link></li>
 
-                  <li><Link to="/btech/cse/mini">B.Tech CSE Mini Projects</Link></li>
-                  <li><Link to="/btech/cse/major">B.Tech CSE Major Projects</Link></li>
+                  <li><Link to="/btech/cse/projects/mini">B.Tech CSE Mini Projects</Link></li>
+                  <li><Link to="/btech/cse/projects/major">B.Tech CSE Major Projects</Link></li>
 
-                  <li><Link to="/mtech/cse/mini">M.Tech CSE Mini Projects</Link></li>
-                  <li><Link to="/mtech/cse/major">M.Tech CSE Major Projects</Link></li>
+                  <li><Link to="/mtech/cse/projects/mini">M.Tech CSE Mini Projects</Link></li>
+                  <li><Link to="/mtech/cse/projects/major">M.Tech CSE Major Projects</Link></li>
 
                   <li><Link to="/btech">Final Year Projects</Link></li>
                   <li><Link to="/ieee">IEEE Projects</Link></li>
@@ -96,20 +96,20 @@ function Footer() {
 
               <ul>
                 <ul>
-                  <li><Link to="/btech/ece/mini">B.Tech ECE Mini Projects</Link></li>
-                  <li><Link to="/btech/ece/major">B.Tech ECE Major Projects</Link></li>
+                  <li><Link to="/btech/ece/projects/mini">B.Tech ECE Mini Projects</Link></li>
+                  <li><Link to="/btech/ece/projects/major">B.Tech ECE Major Projects</Link></li>
 
-                  <li><Link to="/mtech/ece/mini">M.Tech ECE Mini Projects</Link></li>
-                  <li><Link to="/mtech/ece/major">M.Tech ECE Major Projects</Link></li>
+                  <li><Link to="/mtech/ece/projects/mini">M.Tech ECE Mini Projects</Link></li>
+                  <li><Link to="/mtech/ece/projects/major">M.Tech ECE Major Projects</Link></li>
 
-                  <li><Link to="/btech/eee/mini">B.Tech EEE Mini Projects</Link></li>
-                  <li><Link to="/btech/eee/major">B.Tech EEE Major Projects</Link></li>
+                  <li><Link to="/btech/eee/projects/mini">B.Tech EEE Mini Projects</Link></li>
+                  <li><Link to="/btech/eee/projects/major">B.Tech EEE Major Projects</Link></li>
 
-                  <li><Link to="/mtech/eee/mini">M.Tech EEE Mini Projects</Link></li>
-                  <li><Link to="/mtech/eee/major">M.Tech EEE Major Projects</Link></li>
+                  <li><Link to="/mtech/eee/projects/mini">M.Tech EEE Mini Projects</Link></li>
+                  <li><Link to="/mtech/eee/projects/major">M.Tech EEE Major Projects</Link></li>
 
-                  <li><Link to="/btech/civil/mini">B.Tech Civil Mini Projects</Link></li>
-                  <li><Link to="/btech/civil/major">B.Tech Civil Major Projects</Link></li>
+                  <li><Link to="/btech/civil/projects/mini">B.Tech Civil Mini Projects</Link></li>
+                  <li><Link to="/btech/civil/projects/major">B.Tech Civil Major Projects</Link></li>
                 </ul>
 
               </ul>

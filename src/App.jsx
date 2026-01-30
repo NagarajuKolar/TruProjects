@@ -25,26 +25,33 @@ function App() {
   return (
     <>
       <Navbar />
-      <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<Aboutus />} />
-        <Route path='/research' element={<Researchpaper />}></Route>
-        <Route path='/contact' element={<Contactus />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/document-writing' element={<DocumentWriting />} />
+        <Route path="/contact" element={<Contactus />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/document-writing" element={<DocumentWriting />} />
 
-        <Route path='/internships' element={<SummerInternship />} />
+        <Route path="/research/:city" element={<Researchpaper />} />
+        <Route path="/research" element={<Researchpaper />} />
+
         <Route path="/internships/:slug" element={<SummerInternship />} />
+        <Route path="/internships" element={<SummerInternship />} />
 
-        <Route path='/:program' element={<ProgramPage />} />
+        {/* <Route path="/:program/:branch/:type/:subject/:city" element={<SubjectPage />} /> */}
+        <Route path="/:program/:branch/:type/:subject" element={<SubjectPage />} />
+        
+        <Route path="/:program/:branch/projects/:type/:city" element={<DomainPage />} />
+        <Route path="/:program/:branch/projects/:type" element={<DomainPage />} />
+
+        <Route path="/:program/:branch/city/:city" element={<BranchProjectspage />} />
         <Route path="/:program/:branch" element={<BranchProjectspage />} />
-        <Route path='/:program/:branch/:type' element={<DomainPage />} />
-        <Route path='/:program/:branch/:type/:subject' element={<SubjectPage/>}/>
 
-
-
+        <Route path="/:program/:city" element={<ProgramPage />} />
+        <Route path="/:program" element={<ProgramPage />} />
       </Routes>
+
       <Footer />
 
 

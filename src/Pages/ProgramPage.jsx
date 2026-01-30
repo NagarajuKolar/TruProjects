@@ -15,7 +15,7 @@ import Readmore from '../Components/Readmore';
 import Locationstriper from '../Components/Locationstriper';
 
 function ProgramPage() {
-    const { program } = useParams();
+    const { program, city } = useParams();
     const programConfig = {
         btech: {
             label: "B.Tech",
@@ -31,7 +31,7 @@ function ProgramPage() {
         },
     };
     const programInfo = programConfig[program];
-    const title = programInfo?.title || "Projects";
+    const title = programInfo?.title.toUpperCase() || "Projects";
 
     const branches = [
         { name: "CSE", slug: "cse", image: cse },
@@ -64,7 +64,7 @@ function ProgramPage() {
             "M.Tech Projects Noida",
             "M.Tech Projects Coimbatore",
         ],
-        ieee:[
+        ieee: [
             "IEEE Projects Chennai",
             'IEEE Projects Ananthapur',
             "IEEE Projects Bangalore",
@@ -101,15 +101,13 @@ function ProgramPage() {
         <>
 
             <div className="program-banner">
-                <h1>{title}</h1>
+               <h1>{title} {city && city.toUpperCase()}</h1> 
             </div>
 
             <div className="program-container">
                 <h2 className="section-title">
                     {programInfo?.label} <span>BRANCHES</span>
                 </h2>
-
-
 
                 <div className="branch-grid">
                     {branches.map((branch) => (
@@ -139,7 +137,8 @@ function ProgramPage() {
                 previewText={previewText}
                 fullText={fullText} />
 
-            <Locationstriper locations={locations} />
+            <Locationstriper locations={locations} basePath={`/${program}`} />
+
 
 
 

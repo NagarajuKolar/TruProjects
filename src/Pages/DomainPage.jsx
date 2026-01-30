@@ -9,7 +9,7 @@ import { btechCities, mtechCities } from '../Utils/BranchlocationData';
 import '../CSS/Domaintype.css'
 
 function DomainPage() {
-    const { program, branch, type } = useParams()
+    const { program, branch, type, city } = useParams();
     const programName = program === "btech" ? "B.Tech" : "M.Tech";
     const branchName = branch.toUpperCase();
     const typeName = type === "major" ? "Major" : "Mini";
@@ -40,8 +40,10 @@ function DomainPage() {
         <>
             <div className="domain-banner">
                 <h1>
-                    {programName} {branchName} {typeName} Projects
+                    {programName} {branchName} {typeName} Projects{" "}
+                    {city && city.toUpperCase()}
                 </h1>
+
             </div>
 
             <section className="domain-section">
@@ -65,8 +67,11 @@ function DomainPage() {
             <Readmore
                 previewText={previewText}
                 fullText={fullText} />
-                
-            <Locationstriper locations={citylocations} />
+
+            <Locationstriper
+                locations={citylocations}
+                basePath={`/${program}/${branch}/projects/${type}`} />
+
 
 
         </>

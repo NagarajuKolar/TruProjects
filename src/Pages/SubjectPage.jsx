@@ -10,7 +10,7 @@ import Locationstriper from '../Components/Locationstriper';
 import { btechCities, mtechCities } from '../Utils/BranchlocationData';
 
 function SubjectPage() {
-    const { program, branch, type, subject } = useParams();
+    const { program, branch, type, subject, city } = useParams();
     const programName = program === "btech" ? "B.TECH" : "M.TECH";
     const branchName = branch.toUpperCase();
     const typeName = type === "major" ? "MAJOR" : "MINI";
@@ -32,7 +32,7 @@ function SubjectPage() {
     const projects = subjectProjects[subject] || [];
 
     const pageData = {
-        program:  readableProgram,
+        program: readableProgram,
         branch: "",
         type: type,
         subject: readableTechnology
@@ -50,7 +50,7 @@ function SubjectPage() {
     const fullText = splitParagraphs(formattedBody);
     const cities = program === "btech" ? btechCities : mtechCities;
     const citylocations = cities.map(
-        (city) => `${programName}  ${type} ${readableTechnology} Projects ${city}`
+        (city) => `${programName} ${type} ${readableTechnology} Projects ${city}`
     );
 
 
@@ -152,7 +152,13 @@ function SubjectPage() {
                 previewText={previewText}
                 fullText={fullText} />
 
-            <Locationstriper locations={citylocations} />
+            <Locationstriper
+                locations={citylocations}
+                basePath={`/${program}/${branch}/${type}/${subject}`}
+                useQuery
+            />
+
+
 
 
 

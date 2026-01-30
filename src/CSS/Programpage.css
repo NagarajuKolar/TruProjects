@@ -8,8 +8,8 @@
 
 .program-banner h1 {
   color: #fff;
-  font-size: 38px;
-  font-weight: 600;
+  font-size: 35px;
+  font-weight: 500;
 }
 
 .program-container {
@@ -100,21 +100,31 @@
 .locations-innerr {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px 20px;
+  gap: 22px 12px;
   width: fit-content;
   padding-bottom: 40px;
 }
 
 .location-outer {
   border-bottom: 3px solid #fff;
-  padding: 10px 150px 10px 0px;
+  padding: 10px 110px 10px 0px;
 }
 
-.location-item {
+.location-item a {
   color: #fff;
   font-size: 15px;
   white-space: nowrap;
+  text-decoration: none;
 }
+.location-item.active a {
+  color: #c59b3b;  
+  font-weight: 600;
+}
+
+.location-item.active .pipe {
+  opacity: 0.4;
+}
+
 
 .pipe {
   margin-left: 4px;

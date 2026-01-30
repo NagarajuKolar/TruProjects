@@ -15,7 +15,10 @@ import { FaPlusCircle } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { GrNext } from "react-icons/gr";
 import { GrPrevious } from "react-icons/gr";
+import { useParams } from "react-router-dom";
+import Locationstriper from '../Components/Locationstriper';
 function Researchpaper() {
+    const { city } = useParams();
     const [showMore, setShowMore] = useState(false);
     const [activeIndex, setActiveIndex] = useState(null);
     const [showModal, setShowModal] = useState(false);
@@ -44,6 +47,10 @@ function Researchpaper() {
         "Vizag", "Vijayawada", "Delhi", "Anantapur", "Bangalore", "Chennai", "Tirupati", "Kakinada", "Guntur", "Itanagar", "Dispur", "Patna", "Raipur", "Panaji", "Gandhinagar",
         "Chandigarh", "Shimla", "Ranchi", "Thiruvananthapuram", "Bhopal", "Mumbai", "Shimla", "Ranchi", "Thiruvananthapuram", "Bhopal", "Mumbai",
     ];
+    const citylocations = locations.map(
+        (city) => ` Research Paper Writing & Publishing  ${city}`
+    );
+
 
     return (
         <>
@@ -51,7 +58,11 @@ function Researchpaper() {
                 className="top"
                 style={{ backgroundImage: "url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f')", }}>
                 <div className="overlay">
-                    <h1>RESEARCH PAPER WRITING & PUBLISHING SERVICES</h1>
+                    <h1>
+                        RESEARCH PAPER WRITING & PUBLISHING{" "}
+                        {city ? city.toUpperCase() : "SERVICES"}
+                    </h1>
+
                 </div>
             </section>
 
@@ -210,7 +221,7 @@ function Researchpaper() {
                     <div className="journal-modal-content animate-pop">
 
                         <span className="close-btn" onClick={() => setShowModal(false)} >
-                            <IoMdClose/>
+                            <IoMdClose />
                         </span>
 
                         <span
@@ -224,7 +235,7 @@ function Researchpaper() {
                             <GrPrevious />
                         </span>
 
-                        <img  src={logos[activeIndex]}  alt="active-logo" className="modal-image"/>
+                        <img src={logos[activeIndex]} alt="active-logo" className="modal-image" />
 
                         <span
                             className="nav-arrow right"
@@ -241,17 +252,7 @@ function Researchpaper() {
             )}
 
 
-
-            <section className="locations-flex">
-                <div className="locations-inner">
-                    {locations.map((city, index) => (
-                        <span className="location-item" key={index}>
-                            Research Paper Writing &amp; Publishing {city}
-                            <span className="pipe"> |</span>
-                        </span>
-                    ))}
-                </div>
-            </section>
+            <Locationstriper locations={citylocations} basePath="/research" />
 
 
 
