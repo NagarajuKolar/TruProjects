@@ -53,9 +53,7 @@ function DomainPage() {
 
                 <div className="domain-grid">
                     {domains.map((item) => (
-                        <Link
-                            key={item.slug}
-                            to={`/${program}/${branch}/${type}/${item.slug}`}
+                        <Link key={item.slug} to={`/${program}/${branch}/${type}/${item.slug}`}
                             className="domain-card">
                             <img src={item.image} alt={item.name} />
                             <p>{item.name}</p>

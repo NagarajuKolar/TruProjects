@@ -325,9 +325,9 @@ function Navbar() {
                     <FaPhoneAlt className="nav-phone-icon" /> CALL NOW
                 </a>
 
-                <a href="/register" className="register-btn">
+                <Link to="/register" className="register-btn">
                     <MdEditDocument className="nav-icon" /> REGISTER NOW
-                </a>
+                </Link>
 
                 <a href="https://wa.me/919676190678" className="whatsapp-btn">
                     <FaWhatsapp className="nav-icon" /> WHATSAPP

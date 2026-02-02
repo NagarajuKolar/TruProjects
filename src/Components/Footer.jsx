@@ -126,8 +126,8 @@ function Footer() {
                 <li>MBA Marketing Projects</li>
                 <li>MBA HR Projects</li>
                 <li>MBA Finance Projects</li>
-                <li>Privacy Policy</li>
-                <li>Terms & Conditions</li>
+                <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                <li><Link to="/terms-and-conditions">Terms & Conditions</Link></li>
               </ul>
             </div>
           </div>

@@ -17,6 +17,8 @@ import DomainPage from './Pages/DomainPage'
 import SummerInternship from './Pages/SummerInternship'
 import SubjectPage from './Pages/SubjectPage'
 import ScrollToTop from './Components/ScrollToTop'
+import PrivacyPolicy from './Pages/PrivacyPolicy'
+import TermsAndConditions from './Pages/TermsAndConditions'
 
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
         <Route path="/contact" element={<Contactus />} />
         <Route path="/register" element={<Register />} />
         <Route path="/document-writing" element={<DocumentWriting />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
+        <Route path="/terms-and-conditions" element={<TermsAndConditions/>}/>
 
         <Route path="/research/:city" element={<Researchpaper />} />
         <Route path="/research" element={<Researchpaper />} />
@@ -39,7 +43,6 @@ function App() {
         <Route path="/internships/:slug" element={<SummerInternship />} />
         <Route path="/internships" element={<SummerInternship />} />
 
-        {/* <Route path="/:program/:branch/:type/:subject/:city" element={<SubjectPage />} /> */}
         <Route path="/:program/:branch/:type/:subject" element={<SubjectPage />} />
         
         <Route path="/:program/:branch/projects/:type/:city" element={<DomainPage />} />

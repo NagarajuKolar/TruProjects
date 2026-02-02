@@ -1,0 +1,119 @@
+
+
+
+.privacy-wrapper {
+  margin: 40px auto;
+  padding: 0px 40px;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #333;
+  text-align: justify;
+}
+
+.privacy-wrapper p {
+  margin-bottom: 18px;
+}
+
+.privacy-heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+  color: #111;
+}
+
+.privacy-heading span {
+  color: #e63946;
+}
+
+.privacy-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 50px;
+  height: 2px;
+  background: #e63946;
+}
+
+.privacy-wrapper ul {
+  margin: 10px 0 20px 25px;
+  padding: 0;
+}
+
+.privacy-wrapper ul li {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.privacy-wrapper a {
+  color: #e63946;
+  text-decoration: none;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.privacy-wrapper a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .branch-banner {
+    height: 220px;
+  }
+
+  .branch-banner h1 {
+    font-size: 38px;
+  }
+
+  .privacy-wrapper {
+    margin: 45px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .branch-banner {
+    height: 190px;
+  }
+
+  .branch-banner h1 {
+    font-size: 30px;
+  }
+
+  .privacy-heading {
+    font-size: 22px;
+  }
+
+  .privacy-heading::after {
+    width: 45px;
+  }
+
+  .privacy-wrapper {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .branch-banner {
+    height: 160px;
+  }
+
+  .branch-banner h1 {
+    font-size: 24px;
+  }
+
+  .privacy-wrapper {
+    margin: 30px auto;
+    padding: 0 16px;
+  }
+
+  .privacy-heading {
+    font-size: 20px;
+  }
+
+  .privacy-heading::after {
+    width: 38px;
+  }
+}
